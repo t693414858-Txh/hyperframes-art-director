@@ -1,0 +1,34 @@
+name: Art-direction improvement
+description: Propose a reusable workflow, rubric, or evaluation improvement.
+title: "[Idea]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What recurring aesthetic failure should the Skill handle better?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Explain the reusable rule or workflow change.
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: Evaluation case
+      description: Provide a prompt or artifact that would reveal success or failure.
+    validations:
+      required: true
+  - type: checkboxes
+    id: licensing
+    attributes:
+      label: Asset licensing
+      options:
+        - label: This proposal does not require unlicensed distributable assets.
+          required: true

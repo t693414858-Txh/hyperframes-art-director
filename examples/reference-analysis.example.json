@@ -1,0 +1,73 @@
+{
+  "project": "codex-first-workflow",
+  "sources": [
+    {
+      "id": "reference-01",
+      "location": "user-supplied product film",
+      "source_type": "video",
+      "access_status": "inspected",
+      "rights_note": "Used for analysis only; not a distributable project asset.",
+      "sampled_moments": [
+        {
+          "location": "00:00",
+          "observation": "The outcome appears before explanatory labels."
+        },
+        {
+          "location": "00:12",
+          "observation": "One controlled macro crop creates the strongest scale change."
+        },
+        {
+          "location": "00:27",
+          "observation": "The climax holds longer and removes supporting decoration."
+        }
+      ]
+    }
+  ],
+  "findings": {
+    "narrative_structure": "Outcome first, process second, quiet resolution.",
+    "composition": [
+      "One dominant crop",
+      "Generous neutral space",
+      "Compact evidence zone"
+    ],
+    "typography": [
+      "Exact sans display role",
+      "Small metadata remains subordinate"
+    ],
+    "palette_material": [
+      "Warm neutral canvas",
+      "Near-black text",
+      "One source-derived accent"
+    ],
+    "motion_rhythm": [
+      "One primary movement per beat",
+      "Longer hold at the result"
+    ],
+    "identity_anchors": [
+      "Edge-aligned annotation rule",
+      "Warm-white field"
+    ],
+    "variation": [
+      "Crop distance",
+      "Interface-to-type balance"
+    ]
+  },
+  "translation": {
+    "retain": [
+      "Outcome-first structure",
+      "Controlled negative space",
+      "One primary movement per beat"
+    ],
+    "transform": [
+      "Replace product-film mystery with readable instructional evidence"
+    ],
+    "reject": [
+      "Exact launch layout",
+      "Proprietary typography",
+      "Signature product silhouette"
+    ]
+  },
+  "originality_risk": "medium",
+  "confidence": "high",
+  "limitations": []
+}

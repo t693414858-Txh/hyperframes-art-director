@@ -1,0 +1,20 @@
+{
+  "project": "workbench-update",
+  "runtime_seconds": 100,
+  "experience_ranges": [
+    {"start": 0, "end": 52, "label": "task experience"},
+    {"start": 66, "end": 91, "label": "fit and boundary"}
+  ],
+  "interaction_ranges": [
+    {"start": 0, "end": 12, "phase": "opening", "label": "self-check"},
+    {"start": 50, "end": 62, "phase": "middle", "label": "choice"},
+    {"start": 88, "end": 100, "phase": "closing", "label": "payoff"}
+  ],
+  "scenes": [
+    {"start": 0, "end": 20, "label": "hook", "information_units": 5},
+    {"start": 20, "end": 42, "label": "workflow", "information_units": 6},
+    {"start": 42, "end": 62, "label": "comparison", "information_units": 5},
+    {"start": 62, "end": 82, "label": "boundary", "information_units": 4},
+    {"start": 82, "end": 100, "label": "resolve", "information_units": 4}
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "project": "generic-ai-promo",
+  "evidence_reviewed": {
+    "design_md": "",
+    "contact_sheet": "",
+    "full_size_frames": [],
+    "draft_playback": ""
+  },
+  "route_review": {
+    "primary_route": "Precision Product",
+    "checks": [
+      {
+        "criterion": "Product evidence remains more important than atmosphere.",
+        "status": "fail",
+        "evidence": "Glow and particles occupy more area than the interface.",
+        "action": "Remove atmospheric layers and enlarge the real interface."
+      },
+      {
+        "criterion": "Optical alignment and macro crops are intentional.",
+        "status": "fail",
+        "evidence": "No full-size frame was supplied.",
+        "action": "Capture and inspect representative full-size frames."
+      },
+      {
+        "criterion": "The result avoids recognizable launch-film imitation.",
+        "status": "pass",
+        "evidence": "No exact third-party layout was reproduced.",
+        "action": ""
+      }
+    ]
+  },
+  "identity_review": {
+    "ignored_elements": [
+      "project_name",
+      "logo",
+      "captions",
+      "presenter"
+    ],
+    "result": "fail",
+    "recognized_as": "A generic AI productivity promotion.",
+    "confusable_with": [
+      "Generic meeting assistant",
+      "Generic business dashboard",
+      "Generic AI course"
+    ],
+    "evidence": "After labels and presenter are ignored, only dark gradients and interchangeable cards remain.",
+    "scene_audit": [],
+    "template_swap_test": {
+      "alternate_project": "Generic AI course",
+      "result": "copy_only",
+      "required_redesigns": [],
+      "evidence": "The same cards and gradients can be reused by changing labels."
+    }
+  },
+  "dimensions": {
+    "content_style_fit": {
+      "score": 2,
+      "evidence": "The dark neon treatment is applied only because the subject is AI and conflicts with the trust-led case study.",
+      "action": "Re-route the video around evidence-led intelligence with a light neutral base and real workflow proof."
+    },
+    "project_recognizability": {
+      "score": 2,
+      "evidence": "The frames remain interchangeable with unrelated AI and productivity videos.",
+      "action": "Build a recurring content-specific transformation from real project evidence."
+    },
+    "narrative_clarity": {
+      "score": 3,
+      "evidence": "The scenes list features but do not build toward a clear result.",
+      "action": "Reorder the scenes around one problem, one transformation, and one result."
+    },
+    "composition_and_focus": {
+      "score": 2,
+      "evidence": "Every scene repeats the same centered card stack.",
+      "action": "Create an edge-anchored UI crop and vary scale at the structural contrast beat."
+    },
+    "typography_system": {
+      "score": 3,
+      "evidence": "Headlines and captions use similar size and weight.",
+      "action": "Define separate display, caption, and metadata roles."
+    },
+    "image_and_material_treatment": {
+      "score": 3,
+      "evidence": "Blue-purple glows are unrelated to the product source material.",
+      "action": "Derive the palette from the product UI and remove unsupported decorative glows."
+    },
+    "motion_and_rhythm": {
+      "score": 3,
+      "evidence": "All scenes have equal duration and identical upward fades.",
+      "action": "Lengthen the result reveal and define movement hierarchy before implementation."
+    },
+    "continuity_and_distinctiveness": {
+      "score": 3,
+      "evidence": "The video is consistent but visually interchangeable with generic AI promos.",
+      "action": "Introduce one content-specific crop and annotation motif."
+    }
+  },
+  "blocking_issues": []
+}

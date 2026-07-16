@@ -1,0 +1,113 @@
+{
+  "project": "meeting-notes-to-actions",
+  "runtime_seconds": 66.696,
+  "experience_gate": {
+    "felt_change": {
+      "status": "fail",
+      "before": "",
+      "after": "会议变得更高效。",
+      "narration_lines": [],
+      "timestamp_seconds": 3.2,
+      "frame_evidence": "review/scene-01.png",
+      "action": ""
+    },
+    "best_fit_task": {
+      "status": "pass",
+      "task_shape": "会议纪要。",
+      "input": "会议记录。",
+      "operation": "总结。",
+      "result": "摘要。",
+      "narration_lines": [
+        "用 AI 总结会议。"
+      ],
+      "timestamp_seconds": 10.8,
+      "frame_evidence": "review/scene-02.png",
+      "action": ""
+    },
+    "boundary": {
+      "status": "pass",
+      "limitation": "",
+      "narration_lines": [
+        "AI 很强。"
+      ],
+      "timestamp_seconds": 24.5,
+      "frame_evidence": "review/scene-03.png",
+      "action": ""
+    },
+    "evidence": {
+      "status": "pass",
+      "proof": "画面很清晰。",
+      "narration_lines": [
+        "效率很高。"
+      ],
+      "timestamp_seconds": 44.8,
+      "frame_evidence": "review/scene-04.png",
+      "action": ""
+    }
+  },
+  "interaction_gate": {
+    "early_invitation": {
+      "status": "pass",
+      "narration_lines": [
+        "最后评论领取。"
+      ],
+      "timestamp_seconds": 60.0,
+      "frame_evidence": "review/scene-05.png",
+      "action": ""
+    },
+    "single_primary_action": {
+      "status": "pass",
+      "primary_action": "follow_like_save_comment",
+      "secondary_actions": [
+        "follow",
+        "like",
+        "save"
+      ],
+      "narration_lines": [
+        "点赞收藏关注，评论领取。"
+      ],
+      "timestamp_seconds": 63.5,
+      "frame_evidence": "review/scene-05.png",
+      "action": ""
+    },
+    "exact_response_format": {
+      "status": "pass",
+      "response_format": "",
+      "narration_lines": [
+        "评论领取。"
+      ],
+      "timestamp_seconds": 63.5,
+      "frame_evidence": "review/scene-05.png",
+      "action": ""
+    },
+    "specific_reward": {
+      "status": "pass",
+      "reward": "",
+      "narration_lines": [
+        "评论领取。"
+      ],
+      "timestamp_seconds": 63.5,
+      "frame_evidence": "review/scene-05.png",
+      "action": ""
+    },
+    "contract_consistency": {
+      "status": "pass",
+      "keyword": "纪要",
+      "reward": "提示词、行动表和跟进模板",
+      "surfaces": {
+        "narration": "评论“纪要”领取提示词、行动表和跟进模板。",
+        "captions": "评论领取。",
+        "on_screen_cta": "输入 OK 领取资料",
+        "publishing_description": "私信领取资料。",
+        "pinned_comment": "回复“纪要”。"
+      },
+      "narration_lines": [
+        "评论“纪要”领取。"
+      ],
+      "timestamp_seconds": 63.5,
+      "frame_evidence": "review/scene-05.png",
+      "action": ""
+    }
+  },
+  "blocking_issues": []
+}

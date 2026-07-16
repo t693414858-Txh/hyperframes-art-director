@@ -1,0 +1,37 @@
+name: Skill behavior bug
+description: Report an instruction, routing, or review-gate failure.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: User request
+      description: Provide the prompt that triggered the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: Describe the incorrect or weak output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe the art-direction or review behavior you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include relevant frames, scorecards, or output excerpts.
+  - type: input
+    id: hyperframes
+    attributes:
+      label: HyperFrames version or date
+      description: Provide the installed version or the date it was last updated.

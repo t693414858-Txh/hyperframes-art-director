@@ -1,0 +1,344 @@
+{
+  "project": "codex-first-workflow",
+  "mode": "full_direction",
+  "delivery": {
+    "platform": "vertical social",
+    "aspect_ratio": "9:16",
+    "planned_duration_seconds": 30,
+    "sound_context": "sound-on with captions"
+  },
+  "content_profile": {
+    "primary_category": "Technology education",
+    "secondary_category": "",
+    "communication_intent": "Teach",
+    "audience": "New Codex users",
+    "viewing_context": "Mobile short-form video",
+    "emotional_temperature": "Calm, capable, and precise",
+    "evidence_requirement": "high",
+    "credibility_requirement": "high",
+    "available_source_material": [
+      "Real Codex interface capture",
+      "Finished project output",
+      "Narration"
+    ],
+    "brand_cultural_sensitivity": "Use only supplied product and account assets"
+  },
+  "route_decision": {
+    "primary_route": "Knowledge Explainer",
+    "supporting_route": null,
+    "supporting_scope": "",
+    "confidence": "high",
+    "rationale": "The viewer must understand and reproduce a real workflow.",
+    "rejected_alternative": "Precision Product would emphasize desire over instruction.",
+    "override_reason": "",
+    "named_reference_translation": "Apple-like means light neutral space, optical clarity, and restrained motion without copying brand identity.",
+    "candidate_scores": [
+      {
+        "route": "Knowledge Explainer",
+        "intent_fit": 2,
+        "material_fit": 2,
+        "credibility_fit": 2,
+        "audience_fit": 2,
+        "brand_fit": 2,
+        "total": 10
+      },
+      {
+        "route": "Precision Product",
+        "intent_fit": 1,
+        "material_fit": 2,
+        "credibility_fit": 1,
+        "audience_fit": 1,
+        "brand_fit": 2,
+        "total": 7
+      }
+    ]
+  },
+  "creative_thesis": "Make the viewer feel capable by revealing a real Codex workflow through calm, evidence-led steps.",
+  "visual_evidence": {
+    "reference_analysis_status": "completed",
+    "reference_analysis_path": "reference-analysis.json",
+    "asset_readiness_path": "asset-readiness.json",
+    "direction_candidates": [
+      {
+        "id": "direction-a",
+        "route": "Knowledge Explainer",
+        "premise": "Teach through readable context-to-detail interface evidence.",
+        "hero_frame_concepts": [
+          "The completed artifact fills the arrival frame.",
+          "A readable prompt and target control share one causal composition.",
+          "The verified output resolves beside a compact evidence strip."
+        ],
+        "primary_material_requirement": "Readable UI and finished output captures",
+        "strength": "The viewer can reproduce the workflow.",
+        "risk": "The sequence may feel dry if crop and scale remain static."
+      },
+      {
+        "id": "direction-b",
+        "route": "Precision Product",
+        "premise": "Present the workflow as a polished product reveal.",
+        "hero_frame_concepts": [
+          "The output appears as one immaculate product object.",
+          "The interface floats inside generous neutral space.",
+          "A macro product result becomes the final reveal."
+        ],
+        "primary_material_requirement": "High-resolution interface and output captures",
+        "strength": "The product feels controlled and desirable.",
+        "risk": "Product mystique may weaken the instructional purpose."
+      }
+    ],
+    "selected_direction": "direction-a",
+    "selection_evidence": "Direction A keeps the real operations readable at thumbnail and full size while Direction B hides too much instructional context.",
+    "comparison_waiver": ""
+  },
+  "project_fingerprint": {
+    "recognition_target": "A Codex workflow that turns a specific request into a visible code change and verified result.",
+    "proof_assets": [
+      "Real Codex interface capture",
+      "Finished project output"
+    ],
+    "anchors": [
+      {
+        "id": "request-change-verification",
+        "type": "semantic_transformation",
+        "description": "The same request progresses through prompt, file change, and verification states.",
+        "minimum_scene_appearances": 4
+      },
+      {
+        "id": "real-codex-evidence",
+        "type": "source_evidence",
+        "description": "Readable Codex interface and output crops prove each workflow step.",
+        "minimum_scene_appearances": 3
+      },
+      {
+        "id": "verification-rule",
+        "type": "structural",
+        "description": "A thin blue evidence rule connects the claimed action to its visible result.",
+        "minimum_scene_appearances": 3
+      }
+    ],
+    "scene_recurrence": [
+      {
+        "scene_id": "scene-01",
+        "anchor_ids": [
+          "request-change-verification",
+          "real-codex-evidence",
+          "verification-rule"
+        ],
+        "identity_role": "establish",
+        "core_identity_scene": true,
+        "template_swap_result": "requires_redesign",
+        "proof_asset_ids": [
+          "Finished project output"
+        ],
+        "replacement_dimensions": [
+          "source_evidence",
+          "semantic_transformation",
+          "composition"
+        ],
+        "project_specific_evidence": "The final Codex-built artifact appears first with a verification annotation."
+      },
+      {
+        "scene_id": "scene-02",
+        "anchor_ids": [
+          "request-change-verification",
+          "real-codex-evidence",
+          "verification-rule"
+        ],
+        "identity_role": "develop",
+        "core_identity_scene": true,
+        "template_swap_result": "requires_redesign",
+        "proof_asset_ids": [
+          "Real Codex interface capture"
+        ],
+        "replacement_dimensions": [
+          "source_evidence",
+          "semantic_transformation",
+          "composition"
+        ],
+        "project_specific_evidence": "The exact request and target control are readable in the real Codex interface."
+      },
+      {
+        "scene_id": "scene-03",
+        "anchor_ids": [
+          "request-change-verification",
+          "real-codex-evidence",
+          "verification-rule"
+        ],
+        "identity_role": "prove",
+        "core_identity_scene": true,
+        "template_swap_result": "requires_redesign",
+        "proof_asset_ids": [
+          "Real Codex interface capture"
+        ],
+        "replacement_dimensions": [
+          "source_evidence",
+          "semantic_transformation",
+          "motion_behavior"
+        ],
+        "project_specific_evidence": "A real file change is connected to its progress and verification state."
+      },
+      {
+        "scene_id": "scene-04",
+        "anchor_ids": [
+          "request-change-verification",
+          "real-codex-evidence",
+          "verification-rule"
+        ],
+        "identity_role": "resolve",
+        "core_identity_scene": true,
+        "template_swap_result": "requires_redesign",
+        "proof_asset_ids": [
+          "Real Codex interface capture",
+          "Finished project output"
+        ],
+        "replacement_dimensions": [
+          "source_evidence",
+          "semantic_transformation",
+          "composition"
+        ],
+        "project_specific_evidence": "The verified output and source workflow resolve together."
+      }
+    ],
+    "blind_test_prompt": "Ignore the title, Codex name, captions, and presenter; identify the request-to-change-to-verification workflow from the remaining evidence.",
+    "confusable_with": [
+      "Generic AI productivity tutorial",
+      "Generic software launch video"
+    ],
+    "differentiation_strategy": "Make the real request, file change, and verification loop the recurring visual mechanism instead of relying on light technology styling.",
+    "template_swap_test": {
+      "alternate_project": "Generic meeting-summary assistant",
+      "result": "requires_redesign",
+      "required_redesigns": [
+        "composition",
+        "source_evidence",
+        "semantic_transformation",
+        "motion_behavior"
+      ],
+      "evidence": "Changing only labels would leave Codex controls, file changes, and verification states visibly incorrect."
+    }
+  },
+  "visual_system": {
+    "primary_material": "Real interface and output captures",
+    "composition_logic": "Context-to-detail progression with one task per frame",
+    "identity_anchors": [
+      "Warm-white canvas",
+      "Near-black typography",
+      "Thin blue annotation rule"
+    ],
+    "variation_axes": [
+      "Interface crop",
+      "Headline scale",
+      "Evidence format"
+    ],
+    "typography_roles": {
+      "display": "Exact, compact sans",
+      "supporting": "Highly legible sans",
+      "labels": "Compact metadata"
+    },
+    "palette_roles": {
+      "canvas": "#F5F5F3",
+      "primary_text": "#121212",
+      "secondary_text": "#666666",
+      "accent": "#146EF5"
+    },
+    "image_treatment": "Crisp interface captures with controlled crops and no decorative device shell",
+    "texture_depth": "Soft optical shadow only where layers need separation",
+    "motion_character": "Stepwise, restrained, and causal",
+    "transition_language": "One consistent directional reveal between scenes"
+  },
+  "rhythm_map": {
+    "arrival": "Show the finished result before explaining the process.",
+    "development": "Move through prompt, action, and verification.",
+    "contrast": "Pause on the weak generic approach.",
+    "climax": "Reveal the completed workflow and output together.",
+    "resolve": "Return to a clean result frame with the next action."
+  },
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "Outcome First",
+      "script_beat": "This is the result we will build.",
+      "narrative_purpose": "Create immediate relevance.",
+      "route_role": "primary",
+      "dominant_visual_idea": "One finished artifact fills most of the frame.",
+      "primary_focal_point": "Artifact title",
+      "secondary_eye_path": "Small result metadata",
+      "source_material": [
+        "Finished project output"
+      ],
+      "hero_frame": "The finished artifact occupies the upper two-thirds with one precise annotation below.",
+      "duration_seconds": 4,
+      "energy": "medium",
+      "primary_motion_intent": "Reveal the artifact as one visual group.",
+      "transition_intent": "Directional reveal into the source workflow."
+    },
+    {
+      "id": "scene-02",
+      "name": "Prompt",
+      "script_beat": "Start with a specific request.",
+      "narrative_purpose": "Teach the first reproducible action.",
+      "route_role": "primary",
+      "dominant_visual_idea": "A readable prompt and the exact interface target.",
+      "primary_focal_point": "Prompt text",
+      "secondary_eye_path": "Highlighted target control",
+      "source_material": [
+        "Real Codex interface capture"
+      ],
+      "hero_frame": "The prompt occupies the left field while a large interface crop proves where it is used.",
+      "duration_seconds": 7,
+      "energy": "low",
+      "primary_motion_intent": "Introduce prompt and target in causal order.",
+      "transition_intent": "Continue the same directional reveal into execution."
+    },
+    {
+      "id": "scene-03",
+      "name": "Execution",
+      "script_beat": "Codex applies the requested changes.",
+      "narrative_purpose": "Show real workflow evidence.",
+      "route_role": "primary",
+      "dominant_visual_idea": "A context-to-detail crop follows the active change.",
+      "primary_focal_point": "Changed file",
+      "secondary_eye_path": "Progress and verification state",
+      "source_material": [
+        "Real Codex interface capture"
+      ],
+      "hero_frame": "A large file-change crop is paired with one compact progress label.",
+      "duration_seconds": 10,
+      "energy": "high",
+      "primary_motion_intent": "Progressively disclose the action and its consequence.",
+      "transition_intent": "Use the same reveal language with a faster structural beat."
+    },
+    {
+      "id": "scene-04",
+      "name": "Verification",
+      "script_beat": "Check the result before publishing.",
+      "narrative_purpose": "Close the learning loop.",
+      "route_role": "primary",
+      "dominant_visual_idea": "Result and verification evidence coexist.",
+      "primary_focal_point": "Verified result",
+      "secondary_eye_path": "Short next-step instruction",
+      "source_material": [
+        "Finished project output",
+        "Real Codex interface capture"
+      ],
+      "hero_frame": "The verified artifact is dominant with the source interface reduced to a small evidence strip.",
+      "duration_seconds": 9,
+      "energy": "medium",
+      "primary_motion_intent": "Settle both proof elements before the final hold.",
+      "transition_intent": "Resolve with a restrained final hold and optional final-scene fade."
+    }
+  ],
+  "avoidances": [
+    "No generic AI gradients",
+    "No tiny unreadable interface captures",
+    "No repeated centered card layouts",
+    "No decorative motion without instructional value"
+  ],
+  "assumptions": [],
+  "style_preferences_applied": [
+    "Prefer light Apple-inspired minimalism for calm technology tutorials"
+  ],
+  "style_preferences_rejected": [
+    "Dark cybersecurity-retrospective styling is unrelated to this calm tutorial"
+  ]
+}

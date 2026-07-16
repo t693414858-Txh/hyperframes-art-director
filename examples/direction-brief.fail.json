@@ -1,0 +1,155 @@
+{
+  "project": "generic-tech-video",
+  "mode": "full_direction",
+  "delivery": {
+    "platform": "social",
+    "aspect_ratio": "9:16",
+    "planned_duration_seconds": 20,
+    "sound_context": "unknown"
+  },
+  "content_profile": {
+    "primary_category": "Technology",
+    "secondary_category": "",
+    "communication_intent": "Teach",
+    "audience": "Beginners",
+    "viewing_context": "Mobile",
+    "emotional_temperature": "Fast",
+    "evidence_requirement": "maximum",
+    "credibility_requirement": "high",
+    "available_source_material": [
+      "UI screenshot"
+    ],
+    "brand_cultural_sensitivity": "None known"
+  },
+  "route_decision": {
+    "primary_route": "Precision Product",
+    "supporting_route": "Precision Product",
+    "supporting_scope": "",
+    "confidence": "certain",
+    "rationale": "It is a technology video.",
+    "rejected_alternative": "Knowledge Explainer",
+    "override_reason": "",
+    "named_reference_translation": "",
+    "candidate_scores": [
+      {
+        "route": "Precision Product",
+        "intent_fit": 0,
+        "material_fit": 2,
+        "credibility_fit": 1,
+        "audience_fit": 0,
+        "brand_fit": 1,
+        "total": 9
+      },
+      {
+        "route": "Knowledge Explainer",
+        "intent_fit": 2,
+        "material_fit": 2,
+        "credibility_fit": 2,
+        "audience_fit": 2,
+        "brand_fit": 1,
+        "total": 9
+      }
+    ]
+  },
+  "creative_thesis": "Clean and modern.",
+  "visual_evidence": {
+    "reference_analysis_status": "completed",
+    "reference_analysis_path": "",
+    "asset_readiness_path": "",
+    "direction_candidates": [
+      {
+        "id": "direction-a",
+        "route": "Unknown Route",
+        "premise": "Make it modern.",
+        "hero_frame_concepts": [
+          "Cards"
+        ],
+        "primary_material_requirement": "",
+        "strength": "",
+        "risk": ""
+      }
+    ],
+    "selected_direction": "direction-z",
+    "selection_evidence": "",
+    "comparison_waiver": ""
+  },
+  "project_fingerprint": {
+    "recognition_target": "A clean technology video",
+    "proof_assets": [],
+    "anchors": [
+      {
+        "id": "blue",
+        "type": "color",
+        "description": "Use blue.",
+        "minimum_scene_appearances": 1
+      }
+    ],
+    "scene_recurrence": [
+      {
+        "scene_id": "scene-01",
+        "anchor_ids": [
+          "blue"
+        ],
+        "project_specific_evidence": "Blue cards."
+      }
+    ],
+    "blind_test_prompt": "",
+    "confusable_with": [],
+    "differentiation_strategy": ""
+  },
+  "visual_system": {
+    "primary_material": "Cards",
+    "composition_logic": "Centered stack",
+    "identity_anchors": [
+      "Blue"
+    ],
+    "variation_axes": [
+      "None"
+    ],
+    "typography_roles": {
+      "display": "Sans",
+      "supporting": "Sans"
+    },
+    "palette_roles": {
+      "canvas": "dark",
+      "accent": "blue"
+    },
+    "image_treatment": "Glow",
+    "texture_depth": "Particles",
+    "motion_character": "Everything floats",
+    "transition_language": "Different every time"
+  },
+  "rhythm_map": {
+    "arrival": "Title",
+    "development": "Cards",
+    "contrast": "Cards",
+    "climax": "Cards",
+    "resolve": "Logo"
+  },
+  "scenes": [
+    {
+      "id": "scene-01",
+      "name": "Intro",
+      "script_beat": "Learn the workflow.",
+      "narrative_purpose": "Introduce.",
+      "route_role": "supporting",
+      "dominant_visual_idea": "Cards.",
+      "primary_focal_point": "Title",
+      "secondary_eye_path": "Subtitle",
+      "source_material": [
+        "UI screenshot"
+      ],
+      "hero_frame": "Centered cards.",
+      "duration_seconds": 8,
+      "energy": "maximum",
+      "primary_motion_intent": "Float.",
+      "transition_intent": "Random wipe."
+    }
+  ],
+  "avoidances": [
+    "Avoid bad design"
+  ],
+  "assumptions": [],
+  "style_preferences_applied": [],
+  "style_preferences_rejected": []
+}

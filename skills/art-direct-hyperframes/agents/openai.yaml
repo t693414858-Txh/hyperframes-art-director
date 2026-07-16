@@ -1,0 +1,4 @@
+interface:
+  display_name: "HyperFrames Art Director"
+  short_description: "检查叙事占比与场景密度，建立视觉指纹并生成 HyperFrames 评审证据"
+  default_prompt: "Use $art-direct-hyperframes to validate pre-voice content rhythm, visualize aligned experience and interaction lanes when available, audit assets, define a project fingerprint, compare directions, and generate review evidence before final delivery."

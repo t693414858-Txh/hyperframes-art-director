@@ -1,0 +1,15 @@
+{
+  "project": "feature-list-only",
+  "runtime_seconds": 100,
+  "experience_ranges": [
+    {"start": 22, "end": 38, "label": "one vague benefit"}
+  ],
+  "interaction_ranges": [
+    {"start": 93, "end": 100, "phase": "closing", "label": "late CTA"}
+  ],
+  "scenes": [
+    {"start": 0, "end": 30, "label": "feature list", "information_units": 1},
+    {"start": 30, "end": 65, "label": "feature list continued", "information_units": 1},
+    {"start": 65, "end": 100, "label": "CTA", "information_units": 2}
+  ]
+}

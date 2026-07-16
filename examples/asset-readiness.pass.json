@@ -1,0 +1,69 @@
+{
+  "project": "codex-first-workflow",
+  "intended_route": "Knowledge Explainer",
+  "status": "ready",
+  "primary_material_type": "Readable interface and output captures",
+  "assets": [
+    {
+      "id": "ui-recording-01",
+      "type": "video",
+      "location": "assets/codex-workflow.mp4",
+      "role": "primary",
+      "license_status": "owned",
+      "provenance": "Recorded by the project owner in the real product.",
+      "quality": "high",
+      "duration_seconds": 42,
+      "supports_scenes": [
+        "scene-02",
+        "scene-03",
+        "scene-04"
+      ],
+      "supports_claims": [
+        "claim-workflow-is-reproducible"
+      ]
+    },
+    {
+      "id": "output-01",
+      "type": "image",
+      "location": "assets/finished-output.png",
+      "role": "primary",
+      "license_status": "owned",
+      "provenance": "Generated and captured by the project owner.",
+      "quality": "high",
+      "width": 1800,
+      "height": 2400,
+      "supports_scenes": [
+        "scene-01",
+        "scene-04"
+      ],
+      "supports_claims": [
+        "claim-finished-result"
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "id": "scene-01-result",
+      "kind": "scene",
+      "description": "Show the finished result before instruction begins.",
+      "evidence_required": true,
+      "covered_by": [
+        "output-01"
+      ]
+    },
+    {
+      "id": "claim-workflow",
+      "kind": "claim",
+      "description": "Prove the workflow with a real interface recording.",
+      "evidence_required": true,
+      "covered_by": [
+        "ui-recording-01"
+      ]
+    }
+  ],
+  "missing_critical_assets": [],
+  "limitations": [
+    "The interface recording must be cropped without hiding the target controls."
+  ],
+  "route_recommendation": "Proceed with Knowledge Explainer and keep the real interface as primary material."
+}

@@ -1,0 +1,37 @@
+{
+  "project": "unsupported-documentary",
+  "intended_route": "Editorial Documentary",
+  "status": "ready",
+  "primary_material_type": "Archival photography",
+  "assets": [
+    {
+      "id": "moodboard-image",
+      "type": "image",
+      "location": "https://example.com/search-thumbnail.jpg",
+      "role": "primary",
+      "license_status": "unknown",
+      "provenance": "",
+      "quality": "low",
+      "width": 320,
+      "height": 180,
+      "supports_scenes": [],
+      "supports_claims": []
+    }
+  ],
+  "coverage": [
+    {
+      "id": "claim-history",
+      "kind": "claim",
+      "description": "Show the historical location and event.",
+      "evidence_required": true,
+      "covered_by": [
+        "missing-archive"
+      ]
+    }
+  ],
+  "missing_critical_assets": [
+    "Licensed archival photography"
+  ],
+  "limitations": [],
+  "route_recommendation": ""
+}

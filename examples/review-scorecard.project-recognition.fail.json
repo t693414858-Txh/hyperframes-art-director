@@ -1,0 +1,140 @@
+{
+  "project": "meeting-action-codex-video",
+  "evidence_reviewed": {
+    "design_md": "DESIGN.md",
+    "contact_sheet": "review/contact-sheet.png",
+    "full_size_frames": [
+      "review/scene-01.png",
+      "review/scene-02.png",
+      "review/scene-03.png",
+      "review/scene-04.png",
+      "review/scene-05.png"
+    ],
+    "draft_playback": "review/draft.mp4"
+  },
+  "route_review": {
+    "primary_route": "Knowledge Explainer",
+    "checks": [
+      {
+        "criterion": "Each frame teaches one reproducible step or concept.",
+        "status": "pass",
+        "evidence": "The five scenes explain summary, decision, gaps, actions, and final output.",
+        "action": ""
+      },
+      {
+        "criterion": "Interface evidence remains readable long enough to understand.",
+        "status": "pass",
+        "evidence": "The report-like content is legible at full size.",
+        "action": ""
+      },
+      {
+        "criterion": "Instruction outranks product mystique.",
+        "status": "pass",
+        "evidence": "The sequence remains explanatory rather than promotional.",
+        "action": ""
+      }
+    ]
+  },
+  "identity_review": {
+    "ignored_elements": [
+      "project_name",
+      "logo",
+      "captions",
+      "presenter"
+    ],
+    "result": "fail",
+    "recognized_as": "A generic meeting productivity explainer.",
+    "confusable_with": [
+      "Meeting assistant product",
+      "Consulting action-plan report",
+      "Productivity course"
+    ],
+    "evidence": "After labels and presenter are ignored, the contact sheet contains reusable report pages, cards, tables, and a keyword call to action without a Codex-specific transformation.",
+    "scene_audit": [
+      {
+        "scene_id": "scene-01",
+        "identity_strength": "supporting",
+        "template_swap_result": "copy_only",
+        "source_evidence_visible": false,
+        "project_specific_evidence": "A generic meeting-summary page."
+      },
+      {
+        "scene_id": "scene-02",
+        "identity_strength": "generic",
+        "template_swap_result": "copy_only",
+        "source_evidence_visible": false,
+        "project_specific_evidence": "A generic decision card and field list."
+      },
+      {
+        "scene_id": "scene-03",
+        "identity_strength": "generic",
+        "template_swap_result": "copy_only",
+        "source_evidence_visible": false,
+        "project_specific_evidence": "Generic missing-field cards."
+      },
+      {
+        "scene_id": "scene-04",
+        "identity_strength": "supporting",
+        "template_swap_result": "copy_only",
+        "source_evidence_visible": false,
+        "project_specific_evidence": "A generic action-plan table."
+      },
+      {
+        "scene_id": "scene-05",
+        "identity_strength": "generic",
+        "template_swap_result": "copy_only",
+        "source_evidence_visible": false,
+        "project_specific_evidence": "A generic keyword call to action."
+      }
+    ],
+    "template_swap_test": {
+      "alternate_project": "Generic consulting action-plan course",
+      "result": "copy_only",
+      "required_redesigns": [],
+      "evidence": "All five frames can be reused by changing headings, labels, and the final keyword."
+    }
+  },
+  "dimensions": {
+    "content_style_fit": {
+      "score": 5,
+      "evidence": "The light knowledge-explainer route is appropriate for the instructional manuscript.",
+      "action": ""
+    },
+    "project_recognizability": {
+      "score": 3,
+      "evidence": "The sequence identifies meeting productivity but not the specific Codex workflow or its unique transformation.",
+      "action": "Show conversation fragments becoming task, owner, deadline, and acceptance-criteria fields through real Codex evidence."
+    },
+    "narrative_clarity": {
+      "score": 5,
+      "evidence": "The progression from notes to action table is easy to follow.",
+      "action": ""
+    },
+    "composition_and_focus": {
+      "score": 4,
+      "evidence": "Each page has a clear headline and primary information block.",
+      "action": ""
+    },
+    "typography_system": {
+      "score": 4,
+      "evidence": "Headings, labels, tables, and captions have stable roles.",
+      "action": ""
+    },
+    "image_and_material_treatment": {
+      "score": 4,
+      "evidence": "The warm-white report material and colored status fields remain coherent.",
+      "action": ""
+    },
+    "motion_and_rhythm": {
+      "score": 4,
+      "evidence": "The sequence provides adequate holds and a clear final resolution.",
+      "action": ""
+    },
+    "continuity_and_distinctiveness": {
+      "score": 4,
+      "evidence": "The chapter rail, palette, and report structure connect the sequence, although they do not identify the project.",
+      "action": ""
+    }
+  },
+  "blocking_issues": []
+}

@@ -1,0 +1,39 @@
+{
+  "project": "codex-first-workflow",
+  "source_video": "render/codex-first-workflow.mp4",
+  "design_md": "DESIGN.md",
+  "output_directory": "review",
+  "contact_sheet": {
+    "columns": 2,
+    "thumbnail_width": 420,
+    "padding": 16,
+    "margin": 24,
+    "background": "#F5F5F3"
+  },
+  "scenes": [
+    {
+      "id": "scene-01",
+      "label": "Outcome first",
+      "role": "arrival",
+      "timestamp_seconds": 1.5
+    },
+    {
+      "id": "scene-02",
+      "label": "Prompt",
+      "role": "development",
+      "timestamp_seconds": 8.2
+    },
+    {
+      "id": "scene-03",
+      "label": "Execution proof",
+      "role": "climax",
+      "timestamp_seconds": 18.4
+    },
+    {
+      "id": "scene-04",
+      "label": "Verified result",
+      "role": "resolve",
+      "timestamp_seconds": 27.1
+    }
+  ]
+}

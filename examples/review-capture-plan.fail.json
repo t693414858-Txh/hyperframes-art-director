@@ -1,0 +1,27 @@
+{
+  "project": "",
+  "source_video": "",
+  "design_md": "",
+  "output_directory": "",
+  "contact_sheet": {
+    "columns": 0,
+    "thumbnail_width": 80,
+    "padding": -1,
+    "margin": 500,
+    "background": "white"
+  },
+  "scenes": [
+    {
+      "id": "scene",
+      "label": "",
+      "role": "intro",
+      "timestamp_seconds": 8
+    },
+    {
+      "id": "scene",
+      "label": "Earlier scene",
+      "role": "development",
+      "timestamp_seconds": 4
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "project": "meeting-notes-to-actions",
+  "runtime_seconds": 66.696,
+  "experience_gate": {
+    "felt_change": {
+      "status": "pass",
+      "before": "会后只有二十条消息，没人知道下一步谁来做。",
+      "after": "会议原句被转换为有负责人、截止时间和验收标准的行动合同。",
+      "narration_lines": [
+        "会开完了，群里有二十条消息，但没人知道下一步谁来做。"
+      ],
+      "timestamp_seconds": 3.2,
+      "frame_evidence": "review/scene-01.png",
+      "action": ""
+    },
+    "best_fit_task": {
+      "status": "pass",
+      "task_shape": "多人会议后需要把散乱讨论变成可推进任务。",
+      "input": "脱敏会议消息和后续回复。",
+      "operation": "用 Codex 提取任务、负责人、截止时间和验收标准。",
+      "result": "四字段行动表和 4/4 VERIFIED 合同。",
+      "narration_lines": [
+        "不让它直接写摘要，而是先找四类信息：结论、行动项、负责人、截止时间。"
+      ],
+      "timestamp_seconds": 10.8,
+      "frame_evidence": "review/scene-02.png",
+      "action": ""
+    },
+    "boundary": {
+      "status": "pass",
+      "limitation": "缺少负责人、截止时间或验收标准时，不能让 AI 猜；必须回到会议里追问。",
+      "narration_lines": [
+        "第一遍，把“尽快上线”这种空话标成信息缺口。"
+      ],
+      "timestamp_seconds": 24.5,
+      "frame_evidence": "review/scene-03.png",
+      "action": ""
+    },
+    "evidence": {
+      "status": "pass",
+      "proof": "画面显示后续回复字段令牌落入行动表，并形成 4/4 VERIFIED。",
+      "narration_lines": [
+        "最后得到的不是一篇漂亮纪要，而是一张能直接推进的行动表。"
+      ],
+      "timestamp_seconds": 44.8,
+      "frame_evidence": "review/scene-04.png",
+      "action": ""
+    }
+  },
+  "interaction_gate": {
+    "early_invitation": {
+      "status": "pass",
+      "narration_lines": [
+        "提示词、行动表和跟进模板，评论“纪要”领取。"
+      ],
+      "timestamp_seconds": 39.8,
+      "frame_evidence": "review/scene-04.png",
+      "action": ""
+    },
+    "single_primary_action": {
+      "status": "pass",
+      "primary_action": "comment_keyword",
+      "secondary_actions": [],
+      "narration_lines": [
+        "提示词、行动表和跟进模板，评论“纪要”领取。"
+      ],
+      "timestamp_seconds": 63.5,
+      "frame_evidence": "review/scene-05.png",
+      "action": ""
+    },
+    "exact_response_format": {
+      "status": "pass",
+      "response_format": "纪要",
+      "narration_lines": [
+        "评论“纪要”领取。"
+      ],
+      "timestamp_seconds": 63.5,
+      "frame_evidence": "review/scene-05.png",
+      "action": ""
+    },
+    "specific_reward": {
+      "status": "pass",
+      "reward": "提示词、行动表和跟进模板",
+      "narration_lines": [
+        "提示词、行动表和跟进模板，评论“纪要”领取。"
+      ],
+      "timestamp_seconds": 63.5,
+      "frame_evidence": "review/scene-05.png",
+      "action": ""
+    },
+    "contract_consistency": {
+      "status": "pass",
+      "keyword": "纪要",
+      "reward": "提示词、行动表和跟进模板",
+      "surfaces": {
+        "narration": "提示词、行动表和跟进模板，评论“纪要”领取。",
+        "captions": "提示词、行动表和跟进模板，评论“纪要”领取。",
+        "on_screen_cta": "评论区输入「纪要」领取提示词、行动表和跟进模板",
+        "publishing_description": "评论“纪要”领取提示词、行动表和跟进模板。",
+        "pinned_comment": "回复“纪要”，我发你提示词、行动表和跟进模板。"
+      },
+      "narration_lines": [
+        "提示词、行动表和跟进模板，评论“纪要”领取。"
+      ],
+      "timestamp_seconds": 63.5,
+      "frame_evidence": "review/scene-05.png",
+      "action": ""
+    }
+  },
+  "blocking_issues": []
+}
