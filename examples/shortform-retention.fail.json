@@ -1,0 +1,38 @@
+{
+  "project": "late-proof-card-montage",
+  "platform": "douyin",
+  "format": "single_task",
+  "runtime_seconds": 65,
+  "checkpoints": {
+    "problem_and_result_preview_seconds": 3.0,
+    "first_real_operation_seconds": 9.0,
+    "first_visible_proof_seconds": 17.0,
+    "before_after_or_verification_seconds": 28.0
+  },
+  "meaningful_state_changes": [
+    {
+      "timestamp_seconds": 3.0,
+      "description": "Centered title card appears.",
+      "evidence": "storyboard/title-card.png"
+    },
+    {
+      "timestamp_seconds": 9.0,
+      "description": "A pasted screenshot replaces the title card.",
+      "evidence": "storyboard/screenshot-card.png"
+    }
+  ],
+  "operation_chain": {
+    "start_seconds": 9.0,
+    "end_seconds": 18.0,
+    "continuous_workspace": false,
+    "steps": [
+      "input",
+      "operation"
+    ]
+  },
+  "presentation": {
+    "poster_or_card_montage": true,
+    "primary_evidence_carrier": "poster_cards"
+  },
+  "runtime_waiver": null
+}

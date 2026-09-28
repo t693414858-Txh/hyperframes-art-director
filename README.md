@@ -6,6 +6,32 @@ This project does not replace the official HyperFrames skills. It helps decide w
 
 中文介绍见 [README.zh-CN.md](README.zh-CN.md).
 
+## Version 0.10.0: Lessons From Production
+
+The Skill now chooses a production format before selecting review gates:
+
+| Format | Main material | Review |
+| --- | --- | --- |
+| Operation tutorial | Actual workspace recording | Input, action, proof, verification and applicable timing gates |
+| Case analysis | Relevant people, work stages and environments, with source inserts | Claim attribution, shot purpose, source reuse and narrative pace |
+| Artwork/product showcase | Approved images and comparisons | Source integrity, proportions and readable details |
+| Story/concept film | Actions and consequences | Whether the promised action actually unfolds |
+
+For footage-led films, a shot ledger tracks original source intervals, work stages,
+actions, environments and shot scale. Reframing the same source interval does not
+count as new footage. Deliberate callbacks remain possible with a recorded reason.
+
+Review now follows the exact delivered export. A changed edit needs updated frames
+and scores; retimed narration needs rebuilt captions and scene timings. The Skill
+also checks the final audio, font loading and first/last frames.
+
+Read the [production-format guide](skills/art-direct-hyperframes/references/production-format.md),
+[footage-editing guide](skills/art-direct-hyperframes/references/footage-editing.md)
+and [final-delivery review](skills/art-direct-hyperframes/references/final-delivery-review.md).
+The [example account profile](examples/account-style-profile.md) is opt-in.
+Tutorial timing numbers and post-publish targets are account-derived defaults;
+they do not establish a universal retention law.
+
 ## Problem
 
 Technically valid HyperFrames videos can still fail in predictable ways:
@@ -86,6 +112,22 @@ It validates:
 
 This prevents long visually polished scenes that do not teach, prove, decide, verify, or invite action.
 
+### Short-Form Retention Gate
+
+`shortform-retention-plan.json` turns account diagnostics into release conditions for applicable vertical tutorials, workflow demonstrations, reviews, and lead magnets.
+
+It validates:
+
+- problem and result preview by `0.8s`;
+- first real operation by `2.5s`;
+- first visible proof by `5s`;
+- before/after or verification by `8s`;
+- meaningful state changes at least every `2.5s` during the first `12s`;
+- one continuous evidence-carrying operation;
+- `35s` single-task and `50s` multi-step runtime bands, with an explicit waiver for exceptions.
+
+Post-publish targets are retained as calibration metrics rather than pretending that future playback behavior can be proven before release.
+
 ### Experience And Interaction Gate
 
 `experience-interaction-qa.json` checks that tutorials, workflow explainers, reviews, and lead-magnet videos prove a real viewer-facing experience change.
@@ -146,10 +188,12 @@ Important files:
 - `references/content-style-router.md` - content-aware route selection.
 - `references/project-fingerprint.md` - recognition and template-swap rules.
 - `references/content-rhythm-standard.md` - pre-voice rhythm QA.
+- `references/shortform-retention-standard.md` - opening proof, operation continuity, and runtime QA.
 - `references/experience-interaction-standard.md` - viewer experience and CTA QA.
 - `scripts/validate_direction.py` - validates `direction-brief.json`.
 - `scripts/validate_asset_readiness.py` - validates asset feasibility and rights.
 - `scripts/validate_content_rhythm.py` - validates content-density and interaction timing.
+- `scripts/validate_shortform_retention.py` - validates early proof, state changes, evidence continuity, and runtime.
 - `scripts/validate_experience_interaction.py` - validates experience proof and CTA consistency.
 - `scripts/prepare_visual_review.py` - captures review frames and contact sheets from a rendered draft.
 - `scripts/validate_review.py` - validates final aesthetic scorecards.
@@ -216,14 +260,23 @@ python3 skills/art-direct-hyperframes/scripts/validate_direction.py \
 
 ### 4. Check Pre-Voice Rhythm
 
-For tutorials, reviews, workflow explainers, and lead-magnet videos:
+For instructional tutorials, hands-on reviews, workflow explainers, and tutorial lead magnets:
 
 ```bash
 python3 skills/art-direct-hyperframes/scripts/validate_content_rhythm.py \
   examples/content-rhythm.pass.json
 ```
 
-### 5. Implement With HyperFrames
+### 5. Check Short-Form Retention
+
+Before implementation, applicable short-form work must also pass:
+
+```bash
+python3 skills/art-direct-hyperframes/scripts/validate_shortform_retention.py \
+  examples/shortform-retention.pass.json
+```
+
+### 6. Implement With HyperFrames
 
 Use the official HyperFrames skills for:
 
@@ -234,7 +287,7 @@ Use the official HyperFrames skills for:
 - transitions;
 - linting, inspect/check, preview, and rendering.
 
-### 6. Capture Review Evidence
+### 7. Capture Review Evidence
 
 ```bash
 python3 skills/art-direct-hyperframes/scripts/prepare_visual_review.py \
@@ -248,14 +301,17 @@ For a real project, update the paths and remove `--validate-only`. The script wr
 - `review-evidence.json`;
 - identity review scaffold.
 
-### 7. Validate Experience And Interaction
+### 8. Validate Experience And Interaction
+
+Use this gate for instructional work. Case films, showcases and stories use their
+format-specific review and record findings in the existing aesthetic scorecard.
 
 ```bash
 python3 skills/art-direct-hyperframes/scripts/validate_experience_interaction.py \
   examples/experience-interaction-qa.pass.json
 ```
 
-### 8. Score The Render
+### 9. Score The Render
 
 ```bash
 python3 skills/art-direct-hyperframes/scripts/validate_review.py \
@@ -286,6 +342,8 @@ python3 skills/art-direct-hyperframes/scripts/validate_direction.py \
   examples/direction-brief.pass.json
 python3 skills/art-direct-hyperframes/scripts/validate_content_rhythm.py \
   examples/content-rhythm.pass.json
+python3 skills/art-direct-hyperframes/scripts/validate_shortform_retention.py \
+  examples/shortform-retention.pass.json
 python3 skills/art-direct-hyperframes/scripts/validate_experience_interaction.py \
   examples/experience-interaction-qa.pass.json
 python3 skills/art-direct-hyperframes/scripts/validate_review.py \

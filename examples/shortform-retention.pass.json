@@ -1,0 +1,60 @@
+{
+  "project": "pdf-batch-rename",
+  "platform": "douyin",
+  "format": "single_task",
+  "runtime_seconds": 32,
+  "checkpoints": {
+    "problem_and_result_preview_seconds": 0.6,
+    "first_real_operation_seconds": 1.8,
+    "first_visible_proof_seconds": 4.2,
+    "before_after_or_verification_seconds": 7.4
+  },
+  "meaningful_state_changes": [
+    {
+      "timestamp_seconds": 0.5,
+      "description": "Show 169 disordered files beside the renamed result folder.",
+      "evidence": "storyboard/frame-001.png"
+    },
+    {
+      "timestamp_seconds": 2.0,
+      "description": "Select the source folder and apply the rename rule.",
+      "evidence": "storyboard/frame-002.png"
+    },
+    {
+      "timestamp_seconds": 4.2,
+      "description": "Filenames update visibly in the same Finder window.",
+      "evidence": "storyboard/frame-003.png"
+    },
+    {
+      "timestamp_seconds": 6.4,
+      "description": "Before and after filenames are compared side by side.",
+      "evidence": "storyboard/frame-004.png"
+    },
+    {
+      "timestamp_seconds": 8.7,
+      "description": "An edge-case filename is checked.",
+      "evidence": "storyboard/frame-005.png"
+    },
+    {
+      "timestamp_seconds": 11.0,
+      "description": "The final file count confirms that all files were processed.",
+      "evidence": "storyboard/frame-006.png"
+    }
+  ],
+  "operation_chain": {
+    "start_seconds": 1.8,
+    "end_seconds": 12.0,
+    "continuous_workspace": true,
+    "steps": [
+      "input",
+      "operation",
+      "visible_result",
+      "verification"
+    ]
+  },
+  "presentation": {
+    "poster_or_card_montage": false,
+    "primary_evidence_carrier": "continuous_desktop_operation"
+  },
+  "runtime_waiver": null
+}

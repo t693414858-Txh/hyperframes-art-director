@@ -1,6 +1,6 @@
 # Experience and Interaction Standard
 
-Apply this gate to tool updates, tutorials, reviews, workflow explainers, and lead-magnet videos. A project does not pass by displaying feature names alone.
+Apply this gate to instructional tool updates, tutorials, hands-on reviews, workflow explainers, and tutorial lead magnets. A project does not pass by displaying feature names alone. Use [production-format.md](production-format.md) first; case analysis, artwork showcases and stories use their applicable narrative and visual review instead of this tutorial contract.
 
 ## Coverage Gate
 

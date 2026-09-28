@@ -37,6 +37,11 @@ def main() -> int:
         ROOT / "evals" / "cases" / "14-automated-review-evidence.md",
         ROOT / "evals" / "cases" / "15-light-template-project-recognition.md",
         ROOT / "evals" / "cases" / "16-copy-swap-bypass.md",
+        ROOT / "evals" / "cases" / "17-shortform-retention-gate.md",
+        ROOT / "evals" / "cases" / "18-case-analysis-format.md",
+        ROOT / "evals" / "cases" / "19-footage-variety.md",
+        ROOT / "evals" / "cases" / "20-final-export-evidence.md",
+        ROOT / "examples" / "account-style-profile.md",
         ROOT / "examples" / "asset-readiness.pass.json",
         ROOT / "examples" / "asset-readiness.fail.json",
         ROOT / "examples" / "reference-analysis.example.json",
@@ -47,6 +52,8 @@ def main() -> int:
         ROOT / "examples" / "experience-interaction-qa.fail.json",
         ROOT / "examples" / "content-rhythm.pass.json",
         ROOT / "examples" / "content-rhythm.fail.json",
+        ROOT / "examples" / "shortform-retention.pass.json",
+        ROOT / "examples" / "shortform-retention.fail.json",
         ROOT / "examples" / "meeting-action-redesign-blueprint.md",
         ROOT / "examples" / "direction-brief.pass.json",
         ROOT / "examples" / "direction-brief.fail.json",
@@ -66,6 +73,10 @@ def main() -> int:
         SKILL / "references" / "review-rubric.md",
         SKILL / "references" / "experience-interaction-standard.md",
         SKILL / "references" / "content-rhythm-standard.md",
+        SKILL / "references" / "shortform-retention-standard.md",
+        SKILL / "references" / "production-format.md",
+        SKILL / "references" / "footage-editing.md",
+        SKILL / "references" / "final-delivery-review.md",
         SKILL / "references" / "anti-patterns.md",
         SKILL / "references" / "style-preferences-template.md",
         SKILL / "scripts" / "validate_direction.py",
@@ -74,6 +85,7 @@ def main() -> int:
         SKILL / "scripts" / "validate_review.py",
         SKILL / "scripts" / "validate_experience_interaction.py",
         SKILL / "scripts" / "validate_content_rhythm.py",
+        SKILL / "scripts" / "validate_shortform_retention.py",
     )
     missing = [str(path.relative_to(ROOT)) for path in required if not path.is_file()]
     if missing:
@@ -185,6 +197,18 @@ def main() -> int:
         fail("Content rhythm validator must require experience ranges.")
     if "interaction_ranges" not in content_rhythm_validator:
         fail("Content rhythm validator must require interaction ranges.")
+
+    shortform_retention_validator = (
+        SKILL / "scripts" / "validate_shortform_retention.py"
+    ).read_text(encoding="utf-8")
+    if "SHORTFORM_THRESHOLDS" not in shortform_retention_validator:
+        fail("Short-form validator must define retention thresholds.")
+    if "first_visible_proof_seconds" not in shortform_retention_validator:
+        fail("Short-form validator must enforce first visible proof timing.")
+    if "meaningful_state_changes" not in shortform_retention_validator:
+        fail("Short-form validator must enforce early state changes.")
+    if "poster_or_card_montage" not in shortform_retention_validator:
+        fail("Short-form validator must reject poster-card substitution.")
 
     capture_script = (
         SKILL / "scripts" / "prepare_visual_review.py"

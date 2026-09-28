@@ -2,6 +2,40 @@
 
 All notable changes to this project are documented here.
 
+## 0.10.0 - 2026-09-28
+
+### Changed
+
+- Route operation tutorials, case analysis, artwork showcases and stories separately; tutorial timing and interaction quotas no longer govern every short video.
+- Require case-film review to assess work stages, actions, environments and source intervals instead of treating more cuts or cropped duplicates as richer footage.
+- Bind review evidence to the delivered export and invalidate scores after a visual revision.
+- Preserve existing publication authorization, including scoped standing grants, when resuming recurring projects.
+
+### Added
+
+- Footage-editing reference with a shot-ledger contract, source-interval overlap rule, intentional callback handling and playback review.
+- Final-file review for whole-track narration, retiming, font loading, source proportions, first/last frames and evidence freshness.
+- An opt-in account style profile and three behavioral evaluation cases for format routing, material repetition and final-export regressions.
+
+### Migration
+
+- Existing tutorial JSON plans and validators are unchanged. Declare the production format before selecting validators; case analysis uses footage and narrative review recorded in the existing aesthetic scorecard.
+- Local voice-engine settings and account-specific caption or ending preferences belong in the project profile. The shared Skill does not impose them on every installation.
+
+## 0.9.0 - 2026-07-25
+
+### Added
+
+- Data-informed short-form retention standard for tool tutorials, workflow demonstrations, reviews, and lead magnets
+- Deterministic `shortform-retention-plan.json` validator covering opening proof timing, early state changes, continuous operation evidence, and runtime bands
+- Passing and failing retention plans, unit tests, and a delayed-proof regression evaluation
+- Post-publish calibration targets for 2-second bounce, 5-second completion, average play ratio, favorites, and follow conversion
+
+### Changed
+
+- Full production and render-review workflows now block applicable short-form videos when proof arrives late or poster cards replace real operation
+- Repository validation and GitHub Actions now include the short-form retention gate
+
 ## 0.8.0 - 2026-07-16
 
 ### Added

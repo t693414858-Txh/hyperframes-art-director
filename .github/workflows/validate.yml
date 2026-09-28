@@ -32,6 +32,10 @@ jobs:
           examples/content-rhythm.pass.json
       - run: >-
           python3
+          skills/art-direct-hyperframes/scripts/validate_shortform_retention.py
+          examples/shortform-retention.pass.json
+      - run: >-
+          python3
           skills/art-direct-hyperframes/scripts/validate_experience_interaction.py
           examples/experience-interaction-qa.pass.json
       - run: >-

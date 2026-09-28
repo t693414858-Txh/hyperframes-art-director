@@ -10,6 +10,7 @@ Review:
 - One hero frame from every scene, assembled as a contact sheet
 - Full-size frames for crop, typography, and readability inspection
 - A draft playback or equivalent timing evidence for motion, rhythm, and transitions
+- The validated `shortform-retention-plan.json` and its declared evidence for applicable short-form work
 
 Do not infer motion quality from still frames. Record missing evidence as a blocking issue when it prevents a dimension from being assessed.
 
@@ -51,7 +52,7 @@ Check source quality, crop intent, visual consistency, relationship to typograph
 
 ### Motion and Rhythm
 
-Check pacing variation, hierarchy of movement, stillness, scene density, climax timing, and whether motion guides attention instead of competing for it.
+Check pacing variation, hierarchy of movement, stillness, scene density, climax timing, and whether motion guides attention instead of competing for it. For applicable short-form work, verify the result preview by `0.8s`, real operation by `2.5s`, visible proof by `5s`, verification by `8s`, and meaningful state changes across the first `12s`.
 
 ### Continuity and Distinctiveness
 
@@ -59,7 +60,19 @@ Check fidelity to the creative thesis and `DESIGN.md`, whether scenes belong to 
 
 ## Blocking Issues
 
+Apply format-specific items only after choosing the production format. Tutorial
+operation thresholds do not apply to illustrative footage in case analysis.
+Use [production-format.md](production-format.md) for routing.
+
 Treat any of these as blocking:
+
+- A rejected or superseded export remains the active delivery candidate
+- Review evidence or scores describe an older cut without an explicit carry-over basis
+- A footage-led case film uses a research form as its entire visual argument
+- Repeated source intervals have no editorial reason, or new crops are counted as new material
+- Illustrative people, reconstructed interfaces or generated concepts are presented as actual customers, product tests or results
+- A requested action is replaced by camera movement over a static illustration
+- The encoded export drops narration, loads the wrong font, distorts an approved source or ends before its final caption
 
 - The main message cannot be understood
 - Essential text is unreadable
@@ -75,6 +88,12 @@ Treat any of these as blocking:
 - Required frame or playback evidence is missing for a scored dimension
 - Tool or tutorial content only lists features without a visible user-experience judgment
 - Interaction guidance lacks an executable action, a specific viewer reward, or consistency across narration, captions, CTA, and publishing copy
+- Applicable short-form work does not have a passing `shortform-retention-plan.json`
+- Applicable short-form work shows the problem and recognizable result preview after `0.8s`
+- Applicable short-form work begins its first real operation after `2.5s` or shows its first visible proof after `5s`
+- Applicable short-form work contains a meaningful state-change gap longer than `2.5s` during the first `12s`
+- An applicable software or workflow demonstration uses poster cards or pasted screenshots instead of a continuous operation as its primary evidence
+- Applicable short-form work exceeds `35s` for a single task or `50s` for a multi-step workflow without a valid waiver
 
 ## JSON Format
 

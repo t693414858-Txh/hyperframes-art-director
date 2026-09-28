@@ -1,6 +1,6 @@
 # Content Rhythm Standard
 
-Use this pre-voice gate for tool updates, tutorials, reviews, workflow explainers, and lead-magnet videos. It prevents feature lists, late CTAs, and visually large but informationally empty long scenes from reaching TTS.
+Use this pre-voice gate for instructional tool updates, tutorials, hands-on reviews, workflow explainers, and tutorial lead magnets. It prevents feature lists, late CTAs, and informationally empty long scenes from reaching TTS. Select the format with [production-format.md](production-format.md) first; case analysis, showcases and stories do not need invented experience or interaction ranges to satisfy this tutorial profile.
 
 ## Required Timeline
 

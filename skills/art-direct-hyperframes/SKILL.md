@@ -1,6 +1,6 @@
 ---
 name: art-direct-hyperframes
-description: Diagnose a script or brief, validate narrative coverage and interaction rhythm, select a content-appropriate visual route, and define or review art direction for HyperFrames videos. Use for new videos, major redesigns, storyboard and hero-frame planning, pre-voice content-rhythm checks, typography and image-system decisions, pacing, transitions, or aesthetic review when a result feels generic, sparse, mechanical, template-like, visually inconsistent, or mismatched to the subject. Pair with $visualize for aligned rhythm inspection and $hyperframes for implementation and rendering.
+description: Direct and review HyperFrames videos through content-aware visual routing, footage selection, editorial rhythm, narration continuity and rendered evidence. Use for new directions, storyboards, tutorial demonstrations, case-analysis films, artwork showcases, or revisions to generic, repetitive or incoherent videos. Pair with the installed HyperFrames skills for implementation and rendering.
 ---
 
 # Art Direct HyperFrames
@@ -15,7 +15,7 @@ Own:
 - Creative thesis, intended emotion, audience, and narrative arc
 - Visual route, composition system, image treatment, typography voice, and texture
 - Scene plan, hero-frame intent, rhythm map, and transition intent
-- Pre-voice experience, interaction, uncovered-gap, and long-scene density gates
+- Pre-voice short-form retention, experience, interaction, uncovered-gap, and long-scene density gates
 - Aesthetic review of representative frames and draft renders
 - Updates to the project's `DESIGN.md`
 
@@ -27,6 +27,8 @@ Defer to `$hyperframes` and `$hyperframes-cli` for:
 - Linting, inspection, validation, preview, and rendering commands
 
 When instructions conflict, HyperFrames non-negotiable implementation rules take precedence. Do not restate, weaken, or override them.
+
+Read the installed HyperFrames entrypoint before implementation and follow its current skill routing. Reference names and CLI flags vary across releases; use the installed contract rather than assuming an older plugin layout. Report the actual installed version when relevant.
 
 ## Select a Mode
 
@@ -46,7 +48,21 @@ Use for a narrow visual change when an approved `DESIGN.md` already exists. Pres
 
 ## Gather Inputs
 
+### Recurring Account Automation
+
+Before external actions, read the project's `publishing/AUTHORIZATION.md` when present. Explicit standing authorization there may replace per-episode approval defaults below, but only for its named account, actions, time window and current scope; revocations and required action-time confirmations still apply. Cleanup and proactive notifications have their own authorization, independent of publication. Do not infer standing authority from this skill or from a past published episode.
+
+When the project contains `publishing/WORKFLOW-CONTRACT.md` and the task continues account production, inbox-driven creation, upload or publication, read [references/recurring-account-automation.md](references/recurring-account-automation.md). Resume from verified episode state, carry one active publication pack through the phone form, recover input failures without shortening copy, and prevent duplicate posting. Proceed within current authorization, including a standing grant where it covers the action. Preserve all applicable visual, voice and quality gates below.
+
+### Existing Aesthetic Skills Before Recording
+
+When the project provides `research/aesthetic-skill-index.md`, read it before inventing an image-making workflow. Load the selected content skill and its required references; record concrete adopted rules and visible evidence in the episode's design notes. A list of skill names is not application. Validate a representative finished artwork before investing in recording. Do not substitute a convenient, self-built photo arranger for the requested aesthetic method. Keep content-skill rules distinct (for example, paper Zine versus texture-free photo abstraction); preserve upstream sources and place project-specific adaptations in project documentation. When an artwork is rejected, invalidate dependent narration and recordings instead of polishing the rejected route. Sparse artwork may be valid, but video density must come from meaningful comparisons, details, and reasoning rather than added decorative cards.
+
+For this recurring account, read the project's `publishing/WORKFLOW-CONTRACT.md` with `WORKFLOW.md` before production. Preserve the established art-direction system. Carry the verified campaign deadline and mandatory entry tags into the brief; prepare one active publication pack alongside the finished video. Delivery includes the video, distinct topic/title and description, mandatory and relevant supplemental tags, and comment guidance. Publication is a separate authorization and UI-verification stage, not implied by rendering. Do not shorten the pack because computer input is difficult. Apply these account-specific rules only where that project contract exists.
+
 Read the brief, script, aspect ratio, duration, assets, brand constraints, existing `DESIGN.md`, optional `STYLE-PREFERENCES.md`, and any visual references.
+
+For script or publication-copy work, use the user's configured writing skill when available; this project's default is Sepia. Preserve verified claims and author intent. Keep named account preferences in project records; the shared Skill supplies decision criteria rather than an account-wide style mandate.
 
 For recurring series, also inspect the immediately preceding released or approved video's `DESIGN.md`, asset list, representative frames, and final render path when available. Identify background imagery, b-roll, UI shells, visual metaphors, evidence carriers, and motion motifs that must not be repeated by default.
 
@@ -86,6 +102,16 @@ When the user supplies a video, URL, screenshot, mood board, prior render, or na
 
 Do not claim a visual match when the source could not be inspected. Record the access limitation and continue only with clearly labeled assumptions or ask for an accessible source when the reference is decisive.
 
+#### 1A. Map Reference Mechanism Before Styling
+
+When the user asks to reproduce, mimic, or follow the supplied video's content closely, build a source-to-target beat map before writing the new script.
+
+- For every reference beat, record the viewer problem, spoken claim, visible operation, proof shown, shot function, and transition purpose.
+- Preserve narrative causality, shot responsibility, and evidence cadence when those are the requested qualities; transform the subject assets, exact wording, creator identity, interface shell, and protected trade dress.
+- When the reference names a Skill, GitHub repository, plugin, or product feature, identify and verify it before scripting. Record each claim as `directly_verified`, `adjacent_workflow`, or `unavailable`; never promote an adjacent capability into a direct one.
+- A visual resemblance without the source video's actual operation chain is a failed adaptation. A copied creator surface without original evidence is also a failed adaptation.
+- Save the mapping and originality boundary in `reference-analysis.json`, and verify that every retained source beat has a corresponding target beat or an explicit rejection reason.
+
 ### 2. Diagnose the Content
 
 Read [references/content-style-router.md](references/content-style-router.md). Classify the manuscript before choosing a look:
@@ -102,9 +128,17 @@ Do not route from keywords alone. A technology subject may need documentary trus
 
 Record the diagnosis, route confidence, and unresolved assumptions. When confidence is low, compare two routes and recommend one. Do not ask the user to choose unless the difference would materially change brand or narrative meaning.
 
+### 2.1. Choose the Production Format
+
+Read [references/production-format.md](references/production-format.md). Select operation tutorial, case analysis, artwork/product showcase or story/concept film before applying timing gates. For hybrids, declare the dominant format and genuine demonstration sections.
+
+For footage-led case analysis or documentary work, read [references/footage-editing.md](references/footage-editing.md). Plan relevant people, actions, environments and evidence inserts; record source intervals and shot functions in a shot ledger. A real recording of a research table is insufficient as the full-film visual concept.
+
+Record which checks apply and why. The tutorial validators below do not establish the quality of a case film, artwork showcase or story. Review those formats against their actual viewer promise, with failures carried into the final scorecard.
+
 ### 2A. Validate Content Rhythm Before Voice
 
-For tool updates, tutorials, reviews, workflow explainers, and lead-magnet videos, read [references/content-rhythm-standard.md](references/content-rhythm-standard.md).
+For instructional tool updates, tutorials, hands-on reviews, workflow explainers, and tutorial lead magnets, read [references/content-rhythm-standard.md](references/content-rhythm-standard.md). Case analysis without a hands-on promise uses its narrative and shot review instead; do not invent experience or interaction ranges to pass a tutorial quota.
 
 1. Save planned narration and scene ranges as `content-rhythm.json` before TTS.
 2. Run the bundled deterministic validator:
@@ -116,6 +150,21 @@ python3 <skill-directory>/scripts/validate_content_rhythm.py content-rhythm.json
 3. When `$visualize` is available, show experience, interaction, and scene density as aligned lanes on one time axis. Use it to locate feature-only gaps and weak long scenes; do not substitute the visual for validation.
 4. Block voice generation when any threshold fails. Revise the script or scene plan instead of editing percentages manually.
 5. Re-run with final narration timestamps before rendering.
+
+### 2B. Validate Short-Form Retention Before Voice
+
+For vertical operation tutorials, workflow demonstrations, hands-on product reviews and tutorial lead magnets, read [references/shortform-retention-standard.md](references/shortform-retention-standard.md).
+
+1. Save the opening checkpoints, early state changes, continuous operation chain, evidence paths, runtime band, and any runtime waiver as `shortform-retention-plan.json`.
+2. Run the deterministic validator:
+
+```bash
+python3 <skill-directory>/scripts/validate_shortform_retention.py shortform-retention-plan.json
+```
+
+3. Block voice generation and HyperFrames implementation when the plan delays the result preview, real operation, or visible proof; leaves an early state-change gap over `2.5s`; substitutes poster cards for continuous evidence; or exceeds its runtime band without a valid waiver.
+4. For case analysis, artwork showcases, stories, long-form explainers or deliberately slower films, record why this operation gate does not apply and use the selected format's review. The numerical thresholds are a production profile from a specific account, not a universal retention law.
+5. Re-run against final timestamps and rendered evidence before release.
 
 ### 3. Audit Asset Readiness
 
@@ -227,6 +276,12 @@ Map the video as beats rather than equal-duration slides:
 
 Vary scene duration according to narrative importance. Preserve stillness when it increases attention. Describe motion at the group and attention level while leaving tween implementation to `$hyperframes`.
 
+### 11A. Align Narration and the Delivered File
+
+Read [references/final-delivery-review.md](references/final-delivery-review.md) for narrated work and final delivery. Preserve the approved whole-track voice; inspect unprompted transcription, uncertain pronunciations and the final sentence. After retiming, rebuild dependent captions and scenes. Verify font loading, first and last frames, caption contrast and audio in the actual export.
+
+Use reviewed semantic boundaries for changes tied to narration. Source-footage cuts may follow action within a sentence; cutting voice audio inside a word remains a defect. Apply engine settings, pause tolerances and a stable final-five-second rule only where the project has adopted them.
+
 ### 12. Validate the Direction
 
 For `Full Direction` and major redesigns, save `direction-brief.json` next to `DESIGN.md` using [references/direction-contract.md](references/direction-contract.md). It must map route selection, visual-system decisions, script beats, scene durations, hero frames, and avoidances.
@@ -250,9 +305,12 @@ Before implementation, provide:
 5. Creative thesis, route decision, and project fingerprint
 6. Palette and typography roles
 7. Scene-by-scene storyboard and hero frames
-8. Validated `content-rhythm.json`, rhythm visualization findings, and unresolved density risks
-9. Rhythm map and transition intent
-10. Project-specific avoidances
+8. Validated `shortform-retention-plan.json` when applicable, including its evidence paths and any runtime waiver
+9. Validated `content-rhythm.json`, rhythm visualization findings, and unresolved density risks
+10. Rhythm map and transition intent
+11. Project-specific avoidances
+
+For footage-led work, include the shot ledger, source roles, reuse decisions and remaining sourcing gaps.
 
 Then invoke or instruct use of `$hyperframes` for implementation and `$hyperframes-cli` for technical checks.
 
@@ -286,17 +344,20 @@ python3 <skill-directory>/scripts/prepare_visual_review.py \
 7. Follow [references/contact-sheet-review.md](references/contact-sheet-review.md).
 8. Perform the blind recognition test from [references/project-fingerprint.md](references/project-fingerprint.md).
 9. Audit every frame for identity strength, visible source evidence, and whether a different project would require redesign rather than copy changes.
-10. Re-run `validate_content_rhythm.py` with final narration timestamps and block rendering if timing has reduced coverage or created a long unclassified gap.
-11. For tool, tutorial, review, workflow explainer, or lead-magnet content, run the experience-and-interaction checks in [references/experience-interaction-standard.md](references/experience-interaction-standard.md). Save `experience-interaction-qa.json` and validate it:
+10. For applicable short-form work, re-run `validate_shortform_retention.py` with final timestamps and confirm every declared early evidence path matches the rendered result. Block release when the operation is replaced by cards, proof arrives late, or the first `12s` contains an unplanned attention gap.
+11. For applicable instructional work, re-run `validate_content_rhythm.py` with final narration timestamps and block rendering if timing has reduced coverage or created a long unclassified gap.
+12. For narrated work, verify that the final composition references exactly one continuous narration source. Run the project's deterministic voice-consistency check on the pure narration track, and repeat it with `--boundary <seconds>` whenever a reviewer identifies a suspected switch. Treat a detected timbre boundary as blocking: regenerate the complete narration with the same model and reference, then realign captions. Do not patch only the later section, normalize volume to hide the switch, or splice a different generation batch into the final track.
+13. When captions must be pure white, transparent, and free of outlines or shadows, make the underlying full-width scene region itself dark enough to meet contrast. Keep the caption element transparent and mark only intentional caption copy with `data-layout-allow-caption-zone`; do not use an opaque subtitle card, heavy shadow, or contrast waiver to hide a real failure. Run HyperFrames `check` with both contrast and the production caption-zone geometry.
+14. For instructional tool, tutorial, hands-on review, workflow explainer, or tutorial lead-magnet content, run the experience-and-interaction checks in [references/experience-interaction-standard.md](references/experience-interaction-standard.md). Save `experience-interaction-qa.json` and validate it:
 
 ```bash
 python3 <skill-directory>/scripts/validate_experience_interaction.py experience-interaction-qa.json
 ```
 
-12. Apply the selected route's checks from [references/route-specific-rubrics.md](references/route-specific-rubrics.md).
-13. Score the result using [references/review-rubric.md](references/review-rubric.md).
-14. Copy `review-evidence.json.scorecard_evidence` into the scorecard's `evidence_reviewed` object.
-15. Save the scorecard as JSON and run the validator bundled with this Skill:
+15. Apply the selected route's checks from [references/route-specific-rubrics.md](references/route-specific-rubrics.md).
+16. Score the result using [references/review-rubric.md](references/review-rubric.md).
+17. Copy `review-evidence.json.scorecard_evidence` into the scorecard's `evidence_reviewed` object.
+18. Save the scorecard as JSON and run the validator bundled with this Skill:
 
 ```bash
 python3 <skill-directory>/scripts/validate_review.py path/to/review-scorecard.json
@@ -309,6 +370,8 @@ Pass only when:
 - No dimension is below `3`
 - No blocking issue remains
 - Every score below `4` has a concrete corrective action
+
+For footage-led work, review the current export with [references/footage-editing.md](references/footage-editing.md). Record repetition, shot-purpose and rhythm findings in the existing scorecard. Bind evidence to the exact export and invalidate stale scores after changes. Distinguish user approval of direction from approval of rhythm, final delivery or publication.
 
 Prioritize corrections by viewer impact:
 
@@ -331,10 +394,11 @@ Read [references/anti-patterns.md](references/anti-patterns.md) when diagnosing 
 - Compare distinct visual premises, not palette swaps of one layout.
 - Treat route styling as a container; require a content-derived project fingerprint.
 - Reject a coherent result when it remains interchangeable after titles, logos, captions, and presenters are ignored.
+- For applicable short-form work, treat delayed proof and poster-card substitution as release failures, not aesthetic preferences.
 - Validate the structured direction before writing composition HTML.
 - Distinguish direction problems from technical defects.
 - Preserve strong existing choices instead of redesigning by default.
 - Do not claim aesthetic approval from lint or layout checks alone.
 - Do not score motion or rhythm from still frames alone.
 - Do not use unlicensed mood-board images, fonts, textures, or footage as distributable assets.
-- Do not let a recurring series collapse into the same background素材 or visual shell across adjacent episodes; stable identity is allowed, repeated episode material is not.
+- Avoid accidental reuse of background assets or visual shells across adjacent episodes; document intentional continuity or callbacks.

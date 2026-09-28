@@ -2,6 +2,23 @@
 
 这是一个独立的 Codex Skill，用来给 HyperFrames 视频增加“视觉导演层”：它不替代官方 HyperFrames 技能，而是在写 HTML、CSS、GSAP 之前，先判断视频应该采用什么视觉路线、如何建立项目识别、每一幕应该证明什么，以及最终成片是否真的好看、连贯、有用。
 
+## 0.10.0：把实际剪辑反馈写入规则
+
+制作前先判断视频形态，再选择审核条件：
+
+| 视频形态 | 主体素材 | 审核重点 |
+| --- | --- | --- |
+| 操作教程 | 实际工作区录屏 | 输入、操作、结果、验证及适用的时间门槛 |
+| 案例分析 | 相关人物、工作过程、交付场景，穿插来源证据 | 事实归属、镜头用途、素材重复和叙事节奏 |
+| 作品展示 | 已确认作品、细节和对比 | 原作完整、比例准确、结果看得清 |
+| 故事影片 | 人物行动、物件变化和后果 | 承诺的动作是否实际发生 |
+
+案例视频优先让相关的人、动作和环境承担画面，资料表格在需要证明论点时出现。镜头清单记录源文件、取段起止、工作环节、动作、环境和景别。换裁切不算新素材；刻意回扣可以保留，但要说明用途。
+
+用户认可运镜后，继续修改重复和节奏时保留已认可方向。每次改版重新绑定成片、抽帧和评分；配音变速后重建字幕和镜头时间，并检查实际导出文件的首尾帧、字体和声音。
+
+详细规则见[制作形态](skills/art-direct-hyperframes/references/production-format.md)、[素材与剪辑](skills/art-direct-hyperframes/references/footage-editing.md)和[最终交付审核](skills/art-direct-hyperframes/references/final-delivery-review.md)。[账号偏好示例](examples/account-style-profile.md)需按项目选用。已有教程时间门槛来自账号实践，效果仍需用可比的发布数据验证。
+
 ## 它解决什么问题
 
 很多 HyperFrames 视频技术上能通过，但审美和表达仍然会出问题：
@@ -72,7 +89,23 @@ Skill 会要求每个完整方向定义：
 
 这可以防止“画面很大、很漂亮，但信息为空”的长段落进入制作阶段。
 
-### 4. 体验和互动门槛
+### 4. 短视频留存门槛
+
+`shortform-retention-plan.json` 把账号诊断结论转成适用于竖屏操作教程、工作流演示、实测和教程引流视频的制作条件。案例分析、作品展示和故事先按各自形态审核，不填虚构操作来满足该表。
+
+它会检查：
+
+- `0.8s` 前是否出现问题和可识别的结果预览；
+- `2.5s` 前是否开始真实操作；
+- `5s` 前是否出现第一次可见证据；
+- `8s` 前是否完成前后对比或结果验证；
+- 前 `12s` 是否至少每 `2.5s` 出现一次有意义的状态变化；
+- 是否用连续操作承载证据，而不是用海报卡片或张贴截图替代演示；
+- 单任务是否控制在 `35s` 内，多步骤工作流是否控制在 `50s` 内，超时是否有有效豁免。
+
+发布后的 2 秒跳出率、5 秒完播率、平均播放比例、收藏率和关注转化率作为复盘目标使用，不伪装成发布前可以预测的结果。
+
+### 5. 体验和互动门槛
 
 `experience-interaction-qa.json` 用来检查教程、工具更新、测评、工作流讲解和引流视频是否真的给用户一个明确收益。
 
@@ -89,7 +122,7 @@ Skill 会要求每个完整方向定义：
 - 奖励是否具体；
 - 口播、字幕、画面 CTA、发布文案、置顶评论是否一致。
 
-### 5. 成片审核门槛
+### 6. 成片审核门槛
 
 成片审核从 8 个维度打分：
 
@@ -143,10 +176,11 @@ corrections before another render.
 2. 生成 `asset-readiness.json` 并验证素材可用性。
 3. 生成 `DESIGN.md` 和 `direction-brief.json`。
 4. 对教程/测评/工作流视频生成 `content-rhythm.json`。
-5. 交给官方 HyperFrames 实现 HTML、CSS、GSAP、转场和渲染。
-6. 生成关键帧、联系表和 `review-evidence.json`。
-7. 生成并验证 `experience-interaction-qa.json`。
-8. 生成并验证 `review-scorecard.json`。
+5. 对适用的竖屏短视频生成并验证 `shortform-retention-plan.json`。
+6. 交给官方 HyperFrames 实现 HTML、CSS、GSAP、转场和渲染。
+7. 生成关键帧、联系表和 `review-evidence.json`。
+8. 对适用的教学内容生成并验证 `experience-interaction-qa.json`；其他形态按对应规则审片。
+9. 生成并验证 `review-scorecard.json`。
 
 ## 验证命令
 
@@ -159,6 +193,8 @@ python3 skills/art-direct-hyperframes/scripts/validate_direction.py \
   examples/direction-brief.pass.json
 python3 skills/art-direct-hyperframes/scripts/validate_content_rhythm.py \
   examples/content-rhythm.pass.json
+python3 skills/art-direct-hyperframes/scripts/validate_shortform_retention.py \
+  examples/shortform-retention.pass.json
 python3 skills/art-direct-hyperframes/scripts/validate_experience_interaction.py \
   examples/experience-interaction-qa.pass.json
 python3 skills/art-direct-hyperframes/scripts/validate_review.py \

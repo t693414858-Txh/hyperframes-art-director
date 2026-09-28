@@ -2,6 +2,12 @@
 
 Use this reference before choosing typography, palette, motion, or layout. The goal is not to label the subject; it is to identify the visual behavior that best serves the manuscript.
 
+Choose the production format with [production-format.md](production-format.md).
+Visual route and production format are separate decisions: Evidence-Led
+Intelligence can be a footage-led case film, and Precision Product can be a
+showcase without a recorded operation. Neither implies full-screen tables or
+a fixed palette across episodes.
+
 ## 1. Diagnose the Manuscript
 
 Record this profile:
