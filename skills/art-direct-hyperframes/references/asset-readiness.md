@@ -33,7 +33,7 @@ High-credibility claims must map to visible evidence. An imagery-led route requi
 
 ## Validation
 
-Save `asset-readiness.json` and run:
+When the project selects structured asset validation, save `asset-readiness.json` and run the command below. Otherwise record sources, permitted use, missing material and claim limits in the existing asset notes. Evidence and rights checks still apply without JSON.
 
 ```bash
 python3 <skill-directory>/scripts/validate_asset_readiness.py asset-readiness.json

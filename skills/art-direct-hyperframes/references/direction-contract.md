@@ -1,6 +1,6 @@
 # Direction Brief Contract
 
-For `Full Direction` and major redesigns, save a structured `direction-brief.json` next to `DESIGN.md`. It makes route selection, script coverage, timing, and scene intent testable before HTML implementation.
+When detailed direction validation is selected, save a structured `direction-brief.json` next to `DESIGN.md`. It makes route selection, script coverage, timing, and scene intent testable before HTML implementation. New videos can use compact planning unless an existing pipeline or the task requires this contract; see [review-workflow.md](review-workflow.md).
 
 Validate it with:
 

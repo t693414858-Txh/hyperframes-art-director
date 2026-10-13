@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import sys
 from pathlib import Path
 from typing import Any
@@ -41,7 +42,41 @@ def load_json(path: Path) -> dict[str, Any]:
 
 
 def is_number(value: Any) -> bool:
-    return isinstance(value, (int, float)) and not isinstance(value, bool)
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return False
+    try:
+        return math.isfinite(value)
+    except OverflowError:
+        return False
+
+
+def resolve_thresholds(data: dict[str, Any], errors: list[str]) -> dict[str, float]:
+    thresholds = dict(SHORTFORM_THRESHOLDS)
+    overrides = data.get("thresholds", {})
+    if not isinstance(overrides, dict):
+        errors.append("thresholds must be an object")
+        return thresholds
+    if overrides:
+        require_text(data.get("threshold_rationale"), "threshold_rationale", errors)
+    for key, value in overrides.items():
+        if key not in thresholds or key == "runtime_waiver_chapter_count_min":
+            errors.append(f"unsupported threshold: {key}")
+        elif not is_number(value) or value <= 0:
+            errors.append(f"thresholds.{key} must be a finite positive number")
+        else:
+            thresholds[key] = float(value)
+    ordered_keys = (
+        "problem_and_result_preview_seconds_max",
+        "first_real_operation_seconds_max",
+        "first_visible_proof_seconds_max",
+        "before_after_or_verification_seconds_max",
+    )
+    limits = [thresholds[key] for key in ordered_keys]
+    if limits != sorted(limits):
+        errors.append("checkpoint threshold limits must follow preview, operation, proof, verification order")
+    if thresholds["meaningful_state_change_gap_seconds_max"] > thresholds["early_window_seconds"]:
+        errors.append("state-change gap threshold cannot exceed the early window")
+    return thresholds
 
 
 def require_text(value: Any, field: str, errors: list[str]) -> None:
@@ -56,18 +91,21 @@ def require_time(
     errors: list[str],
 ) -> float | None:
     if not is_number(value):
-        errors.append(f"{field} must be a number")
+        errors.append(f"{field} must be a finite number")
         return None
     timestamp = float(value)
     if timestamp < 0:
         errors.append(f"{field} must be >= 0")
+        return None
     if runtime_seconds is not None and timestamp > runtime_seconds:
         errors.append(f"{field} cannot exceed runtime_seconds")
+        return None
     return timestamp
 
 
 def validate_plan(data: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
     errors: list[str] = []
+    thresholds = resolve_thresholds(data, errors)
 
     require_text(data.get("project"), "project", errors)
 
@@ -89,16 +127,16 @@ def validate_plan(data: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
     checkpoints = data.get("checkpoints")
     checkpoint_values: dict[str, float | None] = {}
     checkpoint_limits = {
-        "problem_and_result_preview_seconds": SHORTFORM_THRESHOLDS[
+        "problem_and_result_preview_seconds": thresholds[
             "problem_and_result_preview_seconds_max"
         ],
-        "first_real_operation_seconds": SHORTFORM_THRESHOLDS[
+        "first_real_operation_seconds": thresholds[
             "first_real_operation_seconds_max"
         ],
-        "first_visible_proof_seconds": SHORTFORM_THRESHOLDS[
+        "first_visible_proof_seconds": thresholds[
             "first_visible_proof_seconds_max"
         ],
-        "before_after_or_verification_seconds": SHORTFORM_THRESHOLDS[
+        "before_after_or_verification_seconds": thresholds[
             "before_after_or_verification_seconds_max"
         ],
     }
@@ -145,9 +183,9 @@ def validate_plan(data: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
         errors.append("meaningful_state_changes timestamps must be unique")
 
     early_window = (
-        min(SHORTFORM_THRESHOLDS["early_window_seconds"], runtime_seconds)
+        min(thresholds["early_window_seconds"], runtime_seconds)
         if runtime_seconds is not None
-        else SHORTFORM_THRESHOLDS["early_window_seconds"]
+        else thresholds["early_window_seconds"]
     )
     early_timestamps = [timestamp for timestamp in timestamps if timestamp <= early_window]
     boundaries = [0.0, *early_timestamps, early_window]
@@ -156,7 +194,7 @@ def validate_plan(data: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
         max_gap = max(
             later - earlier for earlier, later in zip(boundaries, boundaries[1:])
         )
-        allowed_gap = SHORTFORM_THRESHOLDS[
+        allowed_gap = thresholds[
             "meaningful_state_change_gap_seconds_max"
         ]
         if max_gap > allowed_gap:
@@ -182,10 +220,9 @@ def validate_plan(data: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
             runtime_seconds,
             errors,
         )
-        if start is not None and start > SHORTFORM_THRESHOLDS[
-            "first_real_operation_seconds_max"
-        ]:
-            errors.append("operation_chain.start_seconds must be <= 2.5s")
+        start_limit = thresholds["first_real_operation_seconds_max"]
+        if start is not None and start > start_limit:
+            errors.append(f"operation_chain.start_seconds must be <= {start_limit:.1f}s")
         if end is not None and end < early_window:
             errors.append(
                 f"operation_chain.end_seconds must reach at least {early_window:.1f}s"
@@ -195,8 +232,8 @@ def validate_plan(data: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
         if operation_chain.get("continuous_workspace") is not True:
             errors.append("operation_chain.continuous_workspace must be true")
         steps = operation_chain.get("steps")
-        if not isinstance(steps, list):
-            errors.append("operation_chain.steps must be an array")
+        if not isinstance(steps, list) or not all(isinstance(step, str) for step in steps):
+            errors.append("operation_chain.steps must be an array of strings")
         else:
             missing_steps = REQUIRED_OPERATION_STEPS - set(steps)
             if missing_steps:
@@ -220,9 +257,9 @@ def validate_plan(data: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
 
     runtime_limit = None
     if video_format == "single_task":
-        runtime_limit = SHORTFORM_THRESHOLDS["single_task_runtime_seconds_max"]
+        runtime_limit = thresholds["single_task_runtime_seconds_max"]
     elif video_format == "multi_step":
-        runtime_limit = SHORTFORM_THRESHOLDS["multi_step_runtime_seconds_max"]
+        runtime_limit = thresholds["multi_step_runtime_seconds_max"]
 
     waiver_used = False
     if (
@@ -262,6 +299,8 @@ def validate_plan(data: dict[str, Any]) -> tuple[list[str], dict[str, Any]]:
         "early_window_seconds": early_window,
         "largest_early_state_change_gap_seconds": round(max_gap, 3),
         "runtime_waiver_used": waiver_used,
+        "effective_thresholds": thresholds,
+        "threshold_rationale": data.get("threshold_rationale", "Legacy tutorial defaults"),
         "error_count": len(errors),
     }
     return errors, report

@@ -19,7 +19,10 @@ Do not bundle copyrighted reference media in this Skill. Project assets intended
 
 ## Candidate Directions
 
-For `Full Direction`, create at least two materially different candidates unless a concrete direction is already approved.
+Compare materially different candidates when the visual choice is unresolved.
+In the detailed direction contract, supply at least two candidates unless its
+approved-direction waiver applies. Ordinary revisions do not require extra
+candidates when the user already approved the direction.
 
 Each candidate needs:
 

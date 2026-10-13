@@ -1,4 +1,4 @@
 interface:
   display_name: "HyperFrames Art Director"
-  short_description: "按内容选择剪辑方式，审核素材重复、叙事节奏与 HyperFrames 成片"
-  default_prompt: "Use $art-direct-hyperframes to choose the production format, plan footage and visual direction, preserve approved preferences, and review the exact rendered video with the applicable quality gates."
+  short_description: "按内容定风格，先看样片，定位剪辑问题并审核 HyperFrames 成片"
+  default_prompt: "Use $art-direct-hyperframes to preserve approved choices, identify the cause of editing problems, inspect a representative sample when needed, and review the actual export with only the applicable checks."

@@ -1,6 +1,10 @@
 # DESIGN.md Template
 
-Use this template for new videos and major redesigns. Preserve compatible project-specific sections when updating an existing file.
+This is the expanded template for detailed direction work. For compact planning,
+record only the subject, viewer promise, production format, selected visual system,
+sources, shot plan, confirmed preferences and review criteria in existing notes.
+Do not create empty sections for irrelevant contracts. Preserve compatible
+project-specific sections when updating an existing file.
 
 ```md
 # Design Direction

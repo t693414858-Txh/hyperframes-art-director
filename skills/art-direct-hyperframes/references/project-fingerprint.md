@@ -1,6 +1,8 @@
 # Project Fingerprint
 
-A visual route controls tone and craft. It does not make a video recognizable as a specific project. Define a project fingerprint before finalizing the visual system.
+A visual route controls tone and craft. It does not make a video recognizable as a specific project. Use the recognition and template-swap questions when generic styling hides the subject.
+
+The anchor schema, scene fields and numeric coverage below belong to the optional detailed direction/scorecard profile. Compact review can record the visible subject, distinguishing evidence and any necessary repairs in existing notes. Do not require a story or artwork to become a software transformation to satisfy this schema.
 
 ## Recognition Target
 

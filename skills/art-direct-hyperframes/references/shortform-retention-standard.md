@@ -1,6 +1,6 @@
 # Short-Form Retention Standard
 
-Use this standard for vertical operation tutorials, workflow demonstrations,
+Use this optional profile for vertical operation tutorials, workflow demonstrations,
 hands-on product reviews and tutorial lead magnets. Choose the format with
 [production-format.md](production-format.md) first. Case analysis, artwork
 showcases, stories and long-form films require their own review; illustrative
@@ -16,18 +16,40 @@ not see a concrete result, real operation, or proof quickly enough.
 
 ## Release Contract
 
-Before voice generation or composition implementation, create
+When the project selects this profile, before voice generation or composition implementation create
 `shortform-retention-plan.json` and validate it with:
 
 ```bash
 python3 scripts/validate_shortform_retention.py shortform-retention-plan.json
 ```
 
-Do not continue when the validator reports an error.
+Resolve validator errors before claiming this profile passes. For a compact review
+without this contract, follow [review-workflow.md](review-workflow.md).
+
+## Project timing settings
+
+The values below remain the defaults for existing tutorial JSON. A project can
+choose different positive, finite timing limits in `thresholds` and explain them
+in `threshold_rationale` before production. This supports longer reading holds
+without inventing a new action. Example fields to add to an otherwise complete plan:
+
+```json
+{
+  "thresholds": {"meaningful_state_change_gap_seconds_max": 4.5},
+  "threshold_rationale": "Hold the rename preview so viewers can compare the filenames."
+}
+```
+
+Supported keys are the eight seconds-based entries in `SHORTFORM_THRESHOLDS` in
+the validator. The two-chapter minimum for a runtime waiver is unchanged.
+Checkpoint limits must follow preview, operation, proof, verification order;
+the allowed gap cannot exceed the early window. Reports include the effective
+thresholds. Changing timing never waives evidence, real operation or continuity.
+Do not relax settings solely to turn a failed final render into a pass.
 
 ## Opening Checkpoints
 
-For an applicable video:
+For a video using the unchanged default profile:
 
 - By `0.8s`: show the problem and a recognizable preview of the result.
 - By `2.5s`: begin a real operation, not an explanation of what will happen.
@@ -49,7 +71,7 @@ do not count.
 - A presenter may support the demonstration but must not cover the primary
   evidence.
 
-## Runtime Bands
+## Default Runtime Bands
 
 - `single_task`: no more than `35s`.
 - `multi_step`: no more than `50s`.
@@ -91,16 +113,17 @@ one revised video.
 | Favorite rate | `> 0.8%` |
 | Follow conversion | `> 0.15%` |
 
-Review the stable post-publish sample and respond to misses:
+Use a stable comparable sample to select hypotheses for inspection:
 
-- High 2-second bounce: replace the opening sentence and first frame.
-- Acceptable 2-second bounce but weak 5-second completion: move operation and
-  proof earlier.
-- Weak average play ratio: remove repeated explanation or split the workflow.
-- Strong watch depth but weak distribution: repackage the topic, cover, and first
-  frame.
-- Strong views but weak follows: tighten the connection between the topic and the
-  account's promised value.
+- High 2-second bounce: inspect topic/audience match, the opening sentence and first frame.
+- Acceptable 2-second bounce but weak 5-second completion: inspect whether operation
+  and proof arrive late or are difficult to read.
+- Weak average play ratio: locate the drop-off and check repeated explanation,
+  comprehension load and workflow length.
+- Strong watch depth but weak distribution: inspect sample size, traffic mix and
+  topic packaging before attributing the result to editing.
+- Strong views but weak follows: check whether the topic connects to the account's
+  promised value and whether the follower metric uses the intended denominator.
 
 Treat these targets as a rolling baseline. Update them only from a comparable
 sample of videos, never from one outlier.

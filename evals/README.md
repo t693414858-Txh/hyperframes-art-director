@@ -18,11 +18,11 @@ Evaluate whether the output:
 - Avoids overriding HyperFrames technical rules
 - Adapts the image-to-graphics balance to the format
 - Produces a useful `DESIGN.md` and scene plan when required
-- Produces a valid `direction-brief.json` for full-direction work
-- Produces and passes `shortform-retention-plan.json` before applicable short-form production
-- Rejects delayed proof, sparse early state changes, and poster-card substitution
+- Uses compact review by default; produces `direction-brief.json` when the detailed contract is selected
+- Produces and passes `shortform-retention-plan.json` when the tutorial timing profile is adopted
+- Checks timely proof against the selected profile, permits justified reading holds, and rejects poster cards presented as real operation
 - Inspects supplied references and separates retain, transform, and reject decisions
-- Produces a valid `asset-readiness.json` before committing to a material-dependent route
+- Checks source readiness and rights; uses `asset-readiness.json` when structured validation is selected
 - Compares materially different visual directions using hero-frame concepts
 - Preserves stable identity anchors while varying scene composition
 - Preserves a project-specific semantic transformation after names, logos, captions, and presenter are ignored
@@ -30,5 +30,10 @@ Evaluate whether the output:
 - Generates ordered review evidence from declared hero-frame timestamps
 - Rejects copy-swap templates even when project-specific prose claims otherwise
 - Identifies high-impact aesthetic problems before decorative details
+- Tests an uncertain visual approach with a representative sample before full production
+- Keeps approved voice and direction during a narrow visual correction
+- Revises a conflicting old preference instead of accumulating another universal rule
 
-The cases cover imagery-led, typography-led, data-led, redesign, adaptive technology, cultural editorial, mixed-content, high-credibility public-information, instructional, preference-memory, reference-analysis, asset-constrained, visual-comparison, automated-review, project-recognition, copy-swap, and short-form retention workflows.
+Cases with expected JSON artifacts exercise the detailed profile: include that profile selection in the evaluation setup. Do not silently impose it on compact-review cases. Run independent evaluations only when delegation is available and authorized, and record actual outcomes separately from these expected behaviors.
+
+The cases cover imagery-led, typography-led, data-led, redesign, adaptive technology, cultural editorial, mixed-content, high-credibility public-information, instructional, preference-memory, reference-analysis, asset-constrained, visual-comparison, automated-review, project-recognition, copy-swap, short-form retention, narrow revisions and reading holds.

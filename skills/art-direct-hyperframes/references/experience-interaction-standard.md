@@ -4,6 +4,11 @@ Apply this gate to instructional tool updates, tutorials, hands-on reviews, work
 
 ## Coverage Gate
 
+Use this detailed contract only when the project adopts it and the brief contains
+a teaching or interaction promise. A showcase or story with no CTA does not need
+a keyword, reward or artificial interaction. Compact review follows
+[review-workflow.md](review-workflow.md).
+
 Passing individual checks is not enough. Follow the separate `content-rhythm-standard.md`, validate the planned timeline before TTS, and measure again against final narration timestamps before rendering:
 
 - Experience-led content must cover at least 40 percent of runtime.

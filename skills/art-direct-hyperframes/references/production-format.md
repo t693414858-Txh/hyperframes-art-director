@@ -12,9 +12,10 @@ format, viewer promise, source material and applicable checks in `DESIGN.md`.
 | Story or concept film | Characters acting, object changes, consequences and reactions | Actions actually unfold; a camera move over an illustration does not establish character action |
 
 For hybrid videos, name the dominant format and identify bounded demonstration
-sections. Run operation checks on a genuine tutorial segment, with its local
-time origin declared. Do not fabricate clicks to fill a tutorial contract for a
-case-analysis film. Record excluded checks and the replacement review evidence.
+sections. Check their input, action, result and verification. When the project
+adopts a tutorial timing profile, apply it to the genuine tutorial segment with
+its local time origin declared. Do not fabricate clicks to fill a tutorial
+contract for a case-analysis film. Record the selected checks and review evidence.
 
 ## Case analysis
 

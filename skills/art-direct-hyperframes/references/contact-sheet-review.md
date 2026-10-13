@@ -11,7 +11,7 @@ Review:
 3. Important frames at full size
 4. At least one complete draft playback
 
-Record the file or URL used for each view in the review scorecard. Missing evidence is a blocker.
+Record the file or URL used for each view in the existing review note, or in the scorecard when the detailed profile is selected. Missing playback or full-size evidence limits what can be approved; name the gap rather than guessing a pass.
 
 Use [review-capture-plan.md](review-capture-plan.md) and the bundled `prepare_visual_review.py` script to generate consistent evidence from a rendered draft. Manual captures remain acceptable when FFmpeg is unavailable, but record exact timestamps and preserve narrative order.
 
@@ -28,9 +28,8 @@ At thumbnail size, verify:
 - Text-heavy frames do not collapse into web-page or slide layouts.
 - When titles, logos, captions, and presenter are ignored, the project-specific transformation remains recognizable.
 - The sequence cannot be relabeled as an unrelated productivity, AI, editorial, or business video without redesigning its central visual mechanism.
-- At least 60 percent of reviewed frames carry primary project identity.
-- Real source evidence is visible in at least 40 percent of reviewed frames.
-- No more than 20 percent of reviewed frames remain generic.
+
+If the detailed identity scorecard is selected, apply its retained coverage limits: at least 60 percent primary project identity, at least 40 percent visible source evidence, and no more than 20 percent generic frames. These are profile thresholds, not universal composition rules.
 
 ## Full-Size Pass
 

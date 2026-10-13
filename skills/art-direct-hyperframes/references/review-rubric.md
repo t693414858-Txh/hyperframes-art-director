@@ -2,6 +2,11 @@
 
 Score each dimension from `1` to `5`. Cite visible evidence. Scores below `4` require a concrete corrective action.
 
+This is the detailed scorecard profile. Compact review uses a timestamped defect
+record as described in [review-workflow.md](review-workflow.md). The detailed
+profile's coverage ratios and score thresholds are retained for compatibility;
+they do not apply automatically to every narrow edit or production format.
+
 ## Required Evidence
 
 Review:
@@ -10,7 +15,7 @@ Review:
 - One hero frame from every scene, assembled as a contact sheet
 - Full-size frames for crop, typography, and readability inspection
 - A draft playback or equivalent timing evidence for motion, rhythm, and transitions
-- The validated `shortform-retention-plan.json` and its declared evidence for applicable short-form work
+- The validated `shortform-retention-plan.json` when that timing profile is adopted
 
 Do not infer motion quality from still frames. Record missing evidence as a blocking issue when it prevents a dimension from being assessed.
 
@@ -52,7 +57,7 @@ Check source quality, crop intent, visual consistency, relationship to typograph
 
 ### Motion and Rhythm
 
-Check pacing variation, hierarchy of movement, stillness, scene density, climax timing, and whether motion guides attention instead of competing for it. For applicable short-form work, verify the result preview by `0.8s`, real operation by `2.5s`, visible proof by `5s`, verification by `8s`, and meaningful state changes across the first `12s`.
+Check pacing variation, hierarchy of movement, stillness, scene density, climax timing, and whether motion guides attention instead of competing for it. For an adopted tutorial timing profile, inspect the rendered checkpoints and state changes against its declared effective thresholds, allowing justified reading holds.
 
 ### Continuity and Distinctiveness
 
@@ -88,12 +93,10 @@ Treat any of these as blocking:
 - Required frame or playback evidence is missing for a scored dimension
 - Tool or tutorial content only lists features without a visible user-experience judgment
 - Interaction guidance lacks an executable action, a specific viewer reward, or consistency across narration, captions, CTA, and publishing copy
-- Applicable short-form work does not have a passing `shortform-retention-plan.json`
-- Applicable short-form work shows the problem and recognizable result preview after `0.8s`
-- Applicable short-form work begins its first real operation after `2.5s` or shows its first visible proof after `5s`
-- Applicable short-form work contains a meaningful state-change gap longer than `2.5s` during the first `12s`
+- A project adopting the tutorial timing contract has no passing plan or its rendered evidence contradicts the plan
+- The adopted plan's opening, proof or meaningful state-change limits are violated
 - An applicable software or workflow demonstration uses poster cards or pasted screenshots instead of a continuous operation as its primary evidence
-- Applicable short-form work exceeds `35s` for a single task or `50s` for a multi-step workflow without a valid waiver
+- A project exceeds its adopted runtime limit without a valid waiver
 
 ## JSON Format
 

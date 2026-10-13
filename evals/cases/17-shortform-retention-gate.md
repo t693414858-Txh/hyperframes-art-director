@@ -2,9 +2,10 @@
 
 ## Prompt
 
-Create a 65-second vertical tutorial from a software workflow. Start with an
-eight-second presenter introduction, explain the method with static cards, and
-show the first real operation after 12 seconds.
+Audit this proposed 65-second vertical software tutorial against our already
+adopted default short-form tutorial profile. The proposal starts with an
+eight-second presenter introduction, explains the method with static cards, and
+shows the first real operation after 12 seconds. Repair the plan before production.
 
 ## Expected behavior
 

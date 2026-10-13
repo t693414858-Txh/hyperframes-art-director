@@ -7,10 +7,12 @@ settings belong in the local voice profile rather than a shared skill default.
 ## One approved narration source
 
 Use the approved model and voice reference for the complete narration. For
-synthetic single-speaker work, regenerate the complete track when it drops words,
-leaks reference text, duplicates a clause or switches timbre. Do not splice in a
-different generation to repair one word. Intentional multi-speaker work follows
-its own brief.
+synthetic single-speaker work, do not splice in a different generation to repair
+one word. If new speech is necessary to restore missing words or voice continuity,
+regenerate a complete consistent track and recheck its content. A duplicate clause
+or unwanted lead-in can be removed from the same source if a clean boundary exists;
+check the join and dependent timing. A visual-only revision does not require new
+speech. Intentional multi-speaker work follows its own brief.
 
 Transcribe without a text prompt to check the opening, all semantic units, proper
 nouns and final sentence. Prompt-assisted recognition can help inspect a name,

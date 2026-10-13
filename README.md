@@ -1,385 +1,113 @@
 # HyperFrames Art Director
 
-An independent Codex Skill that adds an art-direction, content-routing, and review layer to HyperFrames video production.
+A Codex Skill for directing and revising HyperFrames videos. It chooses visual material, plans editorial rhythm and reviews the actual export. Installed HyperFrames skills handle implementation and rendering.
 
-This project does not replace the official HyperFrames skills. It helps decide what a video should feel like, how it should be visually structured, what evidence it should show, and whether the rendered result is actually recognizable, coherent, and useful before HyperFrames handles HTML, GSAP, validation, preview, and rendering.
+[中文说明](README.zh-CN.md)
 
-中文介绍见 [README.zh-CN.md](README.zh-CN.md).
+## What changed in 0.11.0
 
-## Version 0.10.0: Lessons From Production
+Production feedback showed that repeated rules and mandatory paperwork could obscure the editing problem. The entrypoint now uses five steps, with compact review by default and detailed contracts when a project needs them.
 
-The Skill now chooses a production format before selecting review gates:
+| Keep | Reduce or scope |
+| --- | --- |
+| Content-aware style and format selection | Automatic prestige-brand styling |
+| Source evidence and topic-specific identity | Identity percentages required for every video |
+| Relevant footage, real actions and deliberate rhythm | Forced state changes and uniformly fast cuts |
+| Approved voice, final timing and export checks | Regenerating voice for a visual-only revision |
+| Timestamped defects and current review evidence | Every edit producing a full set of JSON contracts |
+| Project-specific caption and ending preferences | One account's settings imposed on all installations |
 
-| Format | Main material | Review |
+A new or repeatedly rejected direction is checked with a representative sample before full production. Timing profiles can allow justified reading holds while keeping operation and evidence requirements.
+
+## Workflow
+
+1. Lock the viewer promise, exact version, approved choices and requested changes.
+2. Choose the production format and visual direction. Inspect supplied references.
+3. Inspect representative artwork or a moving sample when the direction or action is uncertain.
+4. Plan shots, implement, and repair the layer responsible for each defect.
+5. Review the exact export and document remaining issues.
+
+| Format | Main material | Review focus |
 | --- | --- | --- |
-| Operation tutorial | Actual workspace recording | Input, action, proof, verification and applicable timing gates |
-| Case analysis | Relevant people, work stages and environments, with source inserts | Claim attribution, shot purpose, source reuse and narrative pace |
-| Artwork/product showcase | Approved images and comparisons | Source integrity, proportions and readable details |
-| Story/concept film | Actions and consequences | Whether the promised action actually unfolds |
+| Operation tutorial | Recorded input, action, result and verification | Causality, readability and truthful demonstration |
+| Case analysis | Relevant people, work stages and environments, with source inserts | Claim attribution, material variety and editorial rhythm |
+| Artwork/product showcase | Approved work, details and comparisons | Integrity, proportions and inspectable results |
+| Story/concept film | Actions, reactions and consequences | Whether the promised action actually unfolds |
 
-For footage-led films, a shot ledger tracks original source intervals, work stages,
-actions, environments and shot scale. Reframing the same source interval does not
-count as new footage. Deliberate callbacks remain possible with a recorded reason.
+Footage variety is assessed by source intervals, actions, environments, work stages and shot function. Different crops of one interval do not count as new footage. An intentional callback is allowed when its purpose is recorded.
 
-Review now follows the exact delivered export. A changed edit needs updated frames
-and scores; retimed narration needs rebuilt captions and scene timings. The Skill
-also checks the final audio, font loading and first/last frames.
+## Review depth
 
-Read the [production-format guide](skills/art-direct-hyperframes/references/production-format.md),
-[footage-editing guide](skills/art-direct-hyperframes/references/footage-editing.md)
-and [final-delivery review](skills/art-direct-hyperframes/references/final-delivery-review.md).
-The [example account profile](examples/account-style-profile.md) is opt-in.
-Tutorial timing numbers and post-publish targets are account-derived defaults;
-they do not establish a universal retention law.
+**Compact review is the default.** Use the existing design document, storyboard and a short defect record: timestamp, observed problem, cause, edit and verification evidence. Check the subject, visual readability, playback, audio and export identity.
 
-## Problem
+**Detailed review is available** for formal comparisons, repeated unresolved failures, complex compositions and existing automated pipelines. Read [review-workflow.md](skills/art-direct-hyperframes/references/review-workflow.md) to select only the contracts that apply.
 
-Technically valid HyperFrames videos can still fail in predictable ways:
+| Contract | Tool |
+| --- | --- |
+| Asset feasibility and rights | `validate_asset_readiness.py` |
+| Structured direction and scene coverage | `validate_direction.py` |
+| Adopted tutorial timings | `validate_shortform_retention.py` |
+| Adopted instructional coverage | `validate_content_rhythm.py` |
+| Instructional experience and CTA consistency | `validate_experience_interaction.py` |
+| Repeatable frames and contact sheet | `prepare_visual_review.py` |
+| Detailed aesthetic scorecard | `validate_review.py` |
 
-- They look like generic templates.
-- The visual style does not match the manuscript.
-- Screenshots feel pasted onto a background.
-- The video relies on presenter, title, or color instead of project-specific identity.
-- The CTA appears only at the end and does not match the promised reward.
-- Feature-update videos list capabilities without proving a viewer-facing experience change.
+The existing detailed identity ratios and score thresholds remain supported. They are review-profile settings, not universal measures of aesthetic quality. Technical success does not establish audience engagement or overrule a visible defect.
 
-HyperFrames Art Director turns these subjective concerns into explicit direction contracts, review evidence, and deterministic validators.
+## Tutorial timing configuration
 
-## What It Does
+Existing plans without overrides keep the previous defaults: result preview by 0.8s, operation by 2.5s, proof by 5s, verification by 8s, early gaps up to 2.5s, and 35/50s runtime bands.
 
-The Skill guides five parts of video direction:
+For a new project using this profile, record why those timings fit or supply `thresholds` and `threshold_rationale` before production. For example, add these fields to an otherwise complete plan:
 
-1. **Content diagnosis**
-   Classifies the manuscript by intent, audience, emotional temperature, evidence needs, available material, and cultural sensitivity.
-
-2. **Adaptive visual routing**
-   Selects a visual route from content fit rather than topic keywords. A technology script can become a precise product demo, an evidence-led explainer, a documentary workflow, or a warm service story depending on the brief.
-
-3. **Project fingerprinting**
-   Defines what remains recognizable when names, logos, captions, presenter, and generic styling are ignored.
-
-4. **Storyboard and rhythm planning**
-   Converts the brief into hero frames, scene purposes, motion intent, transition logic, and content-density requirements.
-
-5. **Evidence-backed review**
-   Reviews rendered frames and draft playback against source evidence, identity strength, route-specific checks, experience value, CTA consistency, and score thresholds.
-
-## Core Features
-
-### Adaptive Style Router
-
-Included route families:
-
-- Precision Product
-- Knowledge Explainer
-- Editorial Documentary
-- Evidence-Led Intelligence
-- Scientific Clarity
-- Civic Trust
-- Human Warmth
-- Craft and Heritage
-- Kinetic Culture
-- Brand Manifesto
-
-Named references such as Apple or The New York Times are translated into transferable properties. The Skill does not copy living brand trade dress, proprietary type, mastheads, slogans, or interface identity unless the user supplies authorized assets.
-
-### Project Fingerprint Gate
-
-A visual route is not a project identity. Light minimalism, dark technology styling, cards, chapter bars, subtitles, and presenter placement are generic unless they express the specific subject.
-
-Every full direction records:
-
-- semantic transformation;
-- real source-evidence anchor;
-- recurring structural, material, motion, or typographic anchor;
-- scene-by-scene recurrence;
-- blind recognition test;
-- template-swap test;
-- core identity coverage for at least 60 percent of scenes.
-
-### Content Rhythm Gate
-
-`content-rhythm.json` checks whether a script is dense and useful before voice generation.
-
-It validates:
-
-- experience coverage;
-- interaction coverage;
-- combined unique coverage;
-- opening, middle, and closing interaction timing;
-- largest unclassified gap;
-- information units in long scenes.
-
-This prevents long visually polished scenes that do not teach, prove, decide, verify, or invite action.
-
-### Short-Form Retention Gate
-
-`shortform-retention-plan.json` turns account diagnostics into release conditions for applicable vertical tutorials, workflow demonstrations, reviews, and lead magnets.
-
-It validates:
-
-- problem and result preview by `0.8s`;
-- first real operation by `2.5s`;
-- first visible proof by `5s`;
-- before/after or verification by `8s`;
-- meaningful state changes at least every `2.5s` during the first `12s`;
-- one continuous evidence-carrying operation;
-- `35s` single-task and `50s` multi-step runtime bands, with an explicit waiver for exceptions.
-
-Post-publish targets are retained as calibration metrics rather than pretending that future playback behavior can be proven before release.
-
-### Experience And Interaction Gate
-
-`experience-interaction-qa.json` checks that tutorials, workflow explainers, reviews, and lead-magnet videos prove a real viewer-facing experience change.
-
-It validates:
-
-- before-versus-after felt change;
-- best-fit task with input, operation, and result;
-- boundary or limitation;
-- visible proof;
-- early invitation before 60 percent of runtime;
-- one primary CTA;
-- exact response format;
-- specific promised reward;
-- CTA consistency across narration, captions, on-screen CTA, publishing description, and pinned comment.
-
-### Render Review Gate
-
-The review validator scores eight dimensions:
-
-1. Content-to-style fit
-2. Project recognizability
-3. Narrative clarity
-4. Composition and focus
-5. Typography system
-6. Image and material treatment
-7. Motion and rhythm
-8. Continuity and distinctiveness
-
-A review passes only when:
-
-- average score is at least 4.0;
-- project recognizability is at least 4;
-- no dimension is below 3;
-- no blocking issue remains;
-- identity and source-evidence coverage meet thresholds;
-- every score below 4 has a concrete corrective action.
-
-## Repository Layout
-
-```text
-hyperframes-art-director/
-├── skills/art-direct-hyperframes/
-│   ├── SKILL.md
-│   ├── agents/openai.yaml
-│   ├── references/
-│   └── scripts/
-├── examples/
-├── evals/cases/
-├── tests/
-├── scripts/validate_repo.py
-└── .github/workflows/validate.yml
+```json
+{
+  "thresholds": {"meaningful_state_change_gap_seconds_max": 4.5},
+  "threshold_rationale": "Hold the rename preview so viewers can compare the filenames."
+}
 ```
 
-Important files:
+The validator reports effective settings and rejects invalid limits. Overrides cannot remove proof or operation requirements. Do not change thresholds solely to disguise a failed export. See [the timing contract](skills/art-direct-hyperframes/references/shortform-retention-standard.md).
 
-- `skills/art-direct-hyperframes/SKILL.md` - the installable Codex Skill entrypoint.
-- `references/content-style-router.md` - content-aware route selection.
-- `references/project-fingerprint.md` - recognition and template-swap rules.
-- `references/content-rhythm-standard.md` - pre-voice rhythm QA.
-- `references/shortform-retention-standard.md` - opening proof, operation continuity, and runtime QA.
-- `references/experience-interaction-standard.md` - viewer experience and CTA QA.
-- `scripts/validate_direction.py` - validates `direction-brief.json`.
-- `scripts/validate_asset_readiness.py` - validates asset feasibility and rights.
-- `scripts/validate_content_rhythm.py` - validates content-density and interaction timing.
-- `scripts/validate_shortform_retention.py` - validates early proof, state changes, evidence continuity, and runtime.
-- `scripts/validate_experience_interaction.py` - validates experience proof and CTA consistency.
-- `scripts/prepare_visual_review.py` - captures review frames and contact sheets from a rendered draft.
-- `scripts/validate_review.py` - validates final aesthetic scorecards.
+## Install and use
 
-## Install
-
-Copy the installable Skill folder into your Codex skills directory:
+From this repository:
 
 ```bash
 cp -R skills/art-direct-hyperframes "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-Restart or refresh Codex if the Skill is not discovered immediately.
-
-## Use
-
-In Codex:
+Refresh or restart Codex if discovery does not update. Invoke it for direction or revision:
 
 ```text
-Use $art-direct-hyperframes to define the visual direction, storyboard,
-hero frames, rhythm, project fingerprint, and review gates for this script.
-Then use $hyperframes to implement the composition and $hyperframes-cli to
-validate, preview, and render it.
+Use $art-direct-hyperframes to revise this video. Preserve the approved voice
+and visual direction. Diagnose repetition and pacing, fix their causes, and
+review the actual export with the applicable checks.
 ```
 
-For an existing video:
+For a new video, supply the script or brief, audience, format, source material and known preferences. The Skill records reasonable assumptions and asks only for a missing decision that changes the direction.
 
-```text
-Use $art-direct-hyperframes to review this HyperFrames result. Diagnose why it
-feels generic or incoherent, update DESIGN.md if needed, and produce concrete
-corrections before another render.
-```
+## Resources
 
-## Workflow
+- [Production formats](skills/art-direct-hyperframes/references/production-format.md)
+- [Content-to-style router](skills/art-direct-hyperframes/references/content-style-router.md)
+- [Footage selection and rhythm](skills/art-direct-hyperframes/references/footage-editing.md)
+- [Final audio and export review](skills/art-direct-hyperframes/references/final-delivery-review.md)
+- [Optional account profile](examples/account-style-profile.md)
+- [Evaluation cases](evals/README.md)
+- [Changelog](CHANGELOG.md)
 
-### 1. Diagnose
+Project-specific engine settings, platform workflows and publication authorization stay with the project. This Skill does not grant publication permission or create a recurring schedule.
 
-Gather:
-
-- script or brief;
-- audience and platform;
-- aspect ratio and runtime;
-- assets, footage, UI, source documents, data, and fonts;
-- brand constraints and avoidances;
-- prior episode frames when working in a series.
-
-### 2. Validate Assets
-
-Create `asset-readiness.json`, then run:
-
-```bash
-python3 skills/art-direct-hyperframes/scripts/validate_asset_readiness.py \
-  examples/asset-readiness.pass.json
-```
-
-### 3. Create Direction
-
-Create `DESIGN.md` and `direction-brief.json`, then run:
-
-```bash
-python3 skills/art-direct-hyperframes/scripts/validate_direction.py \
-  examples/direction-brief.pass.json
-```
-
-### 4. Check Pre-Voice Rhythm
-
-For instructional tutorials, hands-on reviews, workflow explainers, and tutorial lead magnets:
-
-```bash
-python3 skills/art-direct-hyperframes/scripts/validate_content_rhythm.py \
-  examples/content-rhythm.pass.json
-```
-
-### 5. Check Short-Form Retention
-
-Before implementation, applicable short-form work must also pass:
-
-```bash
-python3 skills/art-direct-hyperframes/scripts/validate_shortform_retention.py \
-  examples/shortform-retention.pass.json
-```
-
-### 6. Implement With HyperFrames
-
-Use the official HyperFrames skills for:
-
-- HTML composition;
-- CSS layout;
-- GSAP choreography;
-- media timing;
-- transitions;
-- linting, inspect/check, preview, and rendering.
-
-### 7. Capture Review Evidence
-
-```bash
-python3 skills/art-direct-hyperframes/scripts/prepare_visual_review.py \
-  examples/review-capture-plan.pass.json --validate-only
-```
-
-For a real project, update the paths and remove `--validate-only`. The script writes:
-
-- full-size frame captures;
-- `contact-sheet.png`;
-- `review-evidence.json`;
-- identity review scaffold.
-
-### 8. Validate Experience And Interaction
-
-Use this gate for instructional work. Case films, showcases and stories use their
-format-specific review and record findings in the existing aesthetic scorecard.
-
-```bash
-python3 skills/art-direct-hyperframes/scripts/validate_experience_interaction.py \
-  examples/experience-interaction-qa.pass.json
-```
-
-### 9. Score The Render
-
-```bash
-python3 skills/art-direct-hyperframes/scripts/validate_review.py \
-  examples/review-scorecard.pass.json
-```
-
-## Example: Operation-Led Meeting Notes Video
-
-The included `meeting-action-redesign-blueprint.md` demonstrates an operation-led workflow explainer:
-
-- a single desktop workbench persists across scenes;
-- cursor movement is used only for meaningful operations;
-- raw meeting lines transform into structured fields;
-- missing owner, deadline, and acceptance criteria become visible gaps;
-- follow-up replies repair the gaps;
-- the final action contract is exported with a consistent CTA.
-
-This pattern is useful when screenshots feel pasted onto the canvas. It turns the visual system into a continuous operation rather than a slideshow of static layouts.
-
-## Validate The Repository
+## Repository checks
 
 ```bash
 python3 scripts/validate_repo.py
 python3 -m unittest discover -s tests -v
-python3 skills/art-direct-hyperframes/scripts/validate_asset_readiness.py \
-  examples/asset-readiness.pass.json
-python3 skills/art-direct-hyperframes/scripts/validate_direction.py \
-  examples/direction-brief.pass.json
-python3 skills/art-direct-hyperframes/scripts/validate_content_rhythm.py \
-  examples/content-rhythm.pass.json
 python3 skills/art-direct-hyperframes/scripts/validate_shortform_retention.py \
-  examples/shortform-retention.pass.json
-python3 skills/art-direct-hyperframes/scripts/validate_experience_interaction.py \
-  examples/experience-interaction-qa.pass.json
-python3 skills/art-direct-hyperframes/scripts/validate_review.py \
-  examples/review-scorecard.pass.json
-python3 skills/art-direct-hyperframes/scripts/prepare_visual_review.py \
-  examples/review-capture-plan.pass.json --validate-only
+  examples/shortform-retention.pass.json --json
 ```
 
-The GitHub Actions workflow runs these checks on push and pull request.
+GitHub Actions also runs the existing passing contract examples. Validators use the Python standard library; automated frame capture requires FFmpeg and FFprobe. Tests check contracts and behavior, not artistic quality. New evaluation prompts require actual agent runs before they can be described as independently tested.
 
-## What This Skill Does Not Do
-
-- It does not replace HyperFrames.
-- It does not render videos by itself.
-- It does not license third-party references, fonts, images, UI, or footage.
-- It does not treat aesthetic approval as equivalent to lint or layout success.
-- It does not copy living brand identity from named references.
-
-## Compatibility
-
-The validators use only the Python standard library. Automated visual review capture requires `ffmpeg` and `ffprobe` on `PATH`.
-
-When this Skill conflicts with official HyperFrames implementation rules, the installed `$hyperframes` and `$hyperframes-cli` rules take precedence.
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-New aesthetic rules should include:
-
-- visible symptom;
-- viewer impact;
-- correction;
-- at least one evaluation case;
-- validator coverage when the rule is deterministic.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
+MIT license. Third-party assets and supplied references retain their own terms.

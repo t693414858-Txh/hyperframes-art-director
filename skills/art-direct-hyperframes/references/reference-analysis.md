@@ -40,7 +40,7 @@ Never retain a third party's logo, masthead, slogan, proprietary typeface, signa
 
 ## `reference-analysis.json`
 
-For `Full Direction`, use:
+When a detailed reference record is useful, use the following structure. Compact review can record the same relevant observations and limitations in the existing design notes; a new JSON file is optional.
 
 ```json
 {

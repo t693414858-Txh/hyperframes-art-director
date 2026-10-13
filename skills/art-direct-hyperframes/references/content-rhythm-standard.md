@@ -4,6 +4,11 @@ Use this pre-voice gate for instructional tool updates, tutorials, hands-on revi
 
 ## Required Timeline
 
+This is an optional instructional profile selected through [review-workflow.md](review-workflow.md).
+Its coverage percentages are adopted production settings, not proven universal
+retention thresholds. Do not add repetitive interaction simply to reach 20 percent.
+Preserve a project's existing adoption unless the current task changes it.
+
 Save `content-rhythm.json` beside the video brief with:
 
 - `runtime_seconds`: planned or final narration duration;

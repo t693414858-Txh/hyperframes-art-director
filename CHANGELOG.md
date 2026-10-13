@@ -2,6 +2,28 @@
 
 All notable changes to this project are documented here.
 
+## 0.11.0 - 2026-10-13
+
+### Changed
+
+- Shorten the entrypoint around format choice, representative samples, shot planning, targeted revisions and review of the actual export.
+- Use compact project notes by default. Keep detailed JSON contracts and identity/interaction quotas available for projects that adopt those profiles, rather than requiring them for every video or visual correction.
+- Preserve approved narration during visual-only revisions; check changed shots and their dependencies without restarting unrelated work.
+- Keep device-specific publishing recovery in the account project instead of the shared art-direction Skill.
+- Revise conflicting preferences in place instead of accumulating a universal rule for each failed edit.
+
+### Added
+
+- Review-depth and change-impact guide, plus behavioral evaluation cases for narrow visual fixes and intentional reading holds.
+- Configurable tutorial timing thresholds with a required rationale, reported effective settings and unchanged evidence requirements.
+- Regression tests for declared reading holds, invalid overrides, non-finite timestamps and malformed operation steps.
+
+### Migration
+
+- Existing JSON plans without overrides retain their previous defaults; existing validators and detailed contracts remain available.
+- Choose a timing profile before production. A new profile is not permission to fabricate actions or relax a failed target merely to report a pass.
+- A passing validator checks the supplied plan or evidence record. It does not establish aesthetic quality, human listening or improved audience retention.
+
 ## 0.10.0 - 2026-09-28
 
 ### Changed
